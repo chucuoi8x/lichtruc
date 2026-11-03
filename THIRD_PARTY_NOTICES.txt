@@ -1,0 +1,16 @@
+VIETNAMESE LUNAR CALENDAR DATA
+
+Copyright 2004 Ho Ngoc Duc [http://come.to/duc]. All Rights Reserved.
+Permission to use, copy, modify, and redistribute this software and its
+documentation for personal, non-commercial use is hereby granted provided that
+this copyright notice appears in all copies.
+
+The lunar-year data in the offline tool is extracted from the author's
+amlich-hnd.js (1800–2199). The tool decodes those tables without a network
+connection or dependency on the computer's timezone.
+
+Source: https://www.xemamlich.uhm.vn/JavaScript/amlich-hnd.js
+Documentation: https://www.xemamlich.uhm.vn/JavaScript/
+Original author: Hồ Ngọc Đức.
+
+The scheduling, local data management and export UI are separate application code.

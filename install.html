@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#28764A"><title>Thiết lập Lịch Trực · GitHub Pages + Google Sheets</title><link rel="icon" href="data:,"><link rel="stylesheet" href="assets/setup.css?v=2.5"><link rel="stylesheet" href="assets/theme.css?v=2.5"></head>
+<body><main class="setup-wrap">
+<header class="setup-header"><a class="brand" href="index.html"><span class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 11h18m-13 4h2m4 0h2"/></svg></span><span>Lịch Trực<small>SẮP LỊCH DỄ DÀNG</small></span></a><span class="version">GitHub Pages + Google Sheets <span>2.5</span></span></header>
+
+<section id="lockedSection" class="done-card" hidden>
+ <span class="success-mark" aria-hidden="true">✓</span>
+ <div class="eyebrow">THIẾT LẬP HOÀN TẤT</div>
+ <h1>Website đã sẵn sàng</h1>
+ <p>Trình cài đặt đã tự khóa. Lịch trực và tài khoản hiện có trong Google Sheets được giữ nguyên.</p>
+ <a class="primary link-button" href="admin.html">Vào trang quản trị <span aria-hidden="true">→</span></a>
+ <a class="secondary link-button" href="index.html">Xem lịch trực</a>
+</section>
+
+<div id="wizardSection">
+ <div class="intro"><div class="eyebrow">CHÀO MỪNG BẠN</div><h1>Cài đặt thật đơn giản</h1><p>Kết nối Google Sheets (Apps Script), tạo tài khoản quản trị — và bắt đầu xếp lịch trên GitHub Pages.</p></div>
+ <ol class="steps" aria-label="Tiến trình cài đặt"><li class="current" data-step="1" aria-current="step"><span>1</span><div>Kết nối dữ liệu<small>Google Sheets</small></div></li><li data-step="2"><span>2</span><div>Tạo quản trị viên<small>Tài khoản của bạn</small></div></li><li data-step="3"><span>3</span><div>Hoàn tất<small>Sẵn sàng sử dụng</small></div></li></ol>
+ <div class="setup-layout">
+  <section class="setup-card">
+   <div id="setupError" class="error" role="alert" hidden></div>
+   <div id="step1" class="step-panel">
+    <div class="panel-heading"><span class="step-label">BƯỚC 1 / 3</span><h2 id="title1" tabindex="-1">Kết nối nơi lưu lịch</h2><p>Chọn nơi lưu dữ liệu để xem hướng dẫn phù hợp.</p></div>
+    <form id="databaseForm">
+     <fieldset class="hosting-options"><legend>Nơi lưu dữ liệu</legend>
+      <label class="hosting-choice"><input type="radio" name="hosting" value="googlesheets" checked><span><strong>Google Sheets (Apps Script)</strong><small>Lưu đám mây dùng chung trên GitHub Pages</small></span><span class="radio-dot" aria-hidden="true"></span></label>
+      <label class="hosting-choice"><input type="radio" name="hosting" value="local"><span><strong>Trình duyệt (Thử nghiệm)</strong><small>Lưu ngay trên máy tính này</small></span><span class="radio-dot" aria-hidden="true"></span></label>
+     </fieldset>
+     <div id="gsFields" class="field-grid" style="grid-template-columns:1fr">
+      <div class="field">
+       <label for="scriptUrl">Địa chỉ Web App (Google Apps Script URL) <span>URL kết thúc bằng /exec sau khi triển khai Code.gs trên Google Sheets</span></label>
+       <input id="scriptUrl" name="scriptUrl" autocomplete="off" spellcheck="false" required maxlength="500" placeholder="https://script.google.com/macros/s/AKfycb.../exec">
+       <small id="hostHint">Dán đúng URL Ứng dụng web (Web app) được cấp khi bấm Triển khai (Deploy) trong Google Apps Script.</small>
+      </div>
+      <div class="field">
+       <label for="sheetName">Ghi chú tên bảng tính (Tùy chọn) <span>Hiển thị để nhận diện</span></label>
+       <input id="sheetName" name="sheetName" autocomplete="off" maxlength="120" value="Lịch Trực Google Sheets">
+      </div>
+     </div>
+     <div class="site-address"><span aria-hidden="true">↗</span><div><span>Địa chỉ website đã tự nhận</span><strong id="detectedSiteUrl">https://github.io/lichtruc</strong></div></div>
+     <button type="submit" id="checkButton" class="primary">Kiểm tra kết nối & tiếp tục <span aria-hidden="true">→</span></button>
+     <p class="form-note">Phần mềm sẽ tự động tạo đủ các bảng (sheet) dữ liệu trong Google Sheets của bạn.</p>
+    </form>
+   </div>
+
+   <div id="step2" class="step-panel" hidden>
+    <div class="panel-heading"><span class="step-label">BƯỚC 2 / 3</span><h2 id="title2" tabindex="-1">Tạo tài khoản của bạn</h2><p>Tài khoản này dùng để xếp lịch, sửa lịch và quản lý nhân sự.</p></div>
+    <div class="connected"><span class="tiny-check" aria-hidden="true">✓</span><div><strong>Đã kết nối dữ liệu</strong><small id="databaseSummary"></small></div><button id="editDatabase" class="text-button" type="button">Thay đổi</button></div>
+    <form id="accountForm">
+     <div class="field-grid">
+      <div class="field"><label for="displayName">Tên hiển thị</label><input id="displayName" name="displayName" autocomplete="name" maxlength="80" value="Quản trị viên" required><small>Tên xuất hiện trong phần quản trị.</small></div>
+      <div class="field"><label for="username">Tên đăng nhập</label><input id="username" name="username" autocomplete="username" value="quantri" minlength="3" maxlength="32" pattern="[A-Za-z0-9][A-Za-z0-9_.-]{2,31}" required spellcheck="false"><small>3–32 ký tự, không dấu và không có khoảng trắng.</small></div>
+      <div class="field"><label for="password">Mật khẩu quản trị</label><div class="password-field"><input id="password" name="password" type="password" minlength="10" maxlength="128" autocomplete="new-password" required aria-describedby="passwordHint"><button type="button" class="reveal" data-for="password" aria-label="Hiện mật khẩu quản trị" aria-pressed="false">Hiện</button></div><small id="passwordHint">Tự đặt mật khẩu từ 10 ký tự trở lên.</small></div>
+      <div class="field"><label for="confirmPassword">Nhập lại mật khẩu</label><div class="password-field"><input id="confirmPassword" name="confirmPassword" type="password" minlength="10" maxlength="128" autocomplete="new-password" required><button type="button" class="reveal" data-for="confirmPassword" aria-label="Hiện mật khẩu nhập lại" aria-pressed="false">Hiện</button></div><small>Nhập giống mật khẩu quản trị bên cạnh.</small></div>
+     </div>
+     <div class="plain-note"><span aria-hidden="true">i</span><p>Nhân viên mở website là xem được lịch đã công bố, không cần tài khoản.</p></div>
+     <div class="form-actions"><button type="button" id="backButton" class="secondary">← Quay lại</button><button type="submit" id="finishButton" class="primary">Hoàn tất cài đặt <span aria-hidden="true">→</span></button></div>
+     <p class="form-note">Trình cài đặt sẽ tự khóa sau khi tạo tài khoản thành công.</p>
+    </form>
+   </div>
+
+   <div id="step3" class="step-panel complete" hidden>
+    <span class="success-mark" aria-hidden="true">✓</span>
+    <span class="step-label">ĐÃ HOÀN TẤT</span>
+    <h2 id="title3" tabindex="-1">Lịch Trực đã sẵn sàng!</h2>
+    <p>Bạn có thể thêm nhân sự, xếp lịch và công bố để mọi người cùng xem.</p>
+    <div class="completion-list"><span>✓ Kết nối Google Sheets</span><span>✓ Tạo quản trị viên</span><span>✓ Tự khóa trình cài đặt</span></div>
+    <button type="button" id="downloadConfigBtn" class="secondary link-button" style="margin-bottom:10px">Tải tệp config.js (đặt lên GitHub Pages)</button>
+    <a class="primary link-button" href="admin.html">Bắt đầu xếp lịch <span aria-hidden="true">→</span></a>
+    <a class="secondary link-button" href="index.html">Mở trang xem dành cho nhân viên</a>
+    <p class="form-note">Đã có lịch ở bản cũ? Vào Sao lưu & hướng dẫn để khôi phục tệp JSON.</p>
+   </div>
+  </section>
+
+  <aside class="help-card" aria-label="Hướng dẫn cài đặt">
+   <div class="help-icon" aria-hidden="true">?</div>
+   <div id="helpGoogleSheets">
+    <h3>Lấy URL Google Sheets ở đâu?</h3>
+    <p>Chỉ mất 1 phút trên Google Drive của bạn:</p>
+    <ol class="help-steps">
+     <li><span>1</span><div><strong>Tạo Google Sheets & mở Apps Script</strong><p>Tạo bảng tính mới, vào <b>Tiện ích mở rộng → Apps Script</b>.</p></div></li>
+     <li><span>2</span><div><strong>Dán mã Code.gs</strong><p>Chép toàn bộ nội dung tệp <b>google-sheets/Code.gs</b> dán vào trình soạn thảo và bấm Lưu.</p></div></li>
+     <li><span>3</span><div><strong>Triển khai Ứng dụng web</strong><p>Bấm <b>Triển khai → Triển khai mới → Ứng dụng web</b>. Chọn Thực thi dưới dạng: <b>Tôi</b> và Ai có quyền truy cập: <b>Bất kỳ ai</b>, rồi sao chép URL dán vào ô bên trái.</p></div></li>
+    </ol>
+    <div class="help-tip">Sau khi cài xong, tải tệp <b>config.js</b> đưa lên kho GitHub Pages để mọi điện thoại/máy tính tự nhận kết nối.</div>
+   </div>
+   <div id="helpLocal" hidden>
+    <h3>Chế độ lưu trên trình duyệt</h3>
+    <ol class="help-steps">
+     <li><span>1</span><div><strong>Thử nghiệm tức thì</strong><p>Không cần tạo Google Sheets ngay, toàn bộ các bảng dữ liệu được mô phỏng trong bộ nhớ trình duyệt.</p></div></li>
+     <li><span>2</span><div><strong>Đầy đủ tính năng 2.5</strong><p>Hỗ trợ ngày cố định, chia đều T7/CN, lịch gốc, tài khoản, giao diện và nhật ký.</p></div></li>
+     <li><span>3</span><div><strong>Chuyển sang Google Sheets bất cứ lúc nào</strong><p>Bạn có thể dán URL Google Apps Script sau trong mục Tài khoản & reset.</p></div></li>
+    </ol>
+   </div>
+   <div id="helpAccount" hidden>
+    <h3>Chỉ quản trị viên đăng nhập</h3>
+    <p>Hãy nhớ tên đăng nhập và mật khẩu vừa đặt để vào trang quản trị lần sau.</p>
+    <div class="help-tip">Tài khoản quản trị được mã hóa và lưu trực tiếp trong sheet <b>lt_users</b> của Google Sheets.</div>
+    <div class="role-note"><strong>Quản trị viên</strong><p>Xếp và sửa lịch, quản lý nhân sự, công bố, sao lưu và reset.</p><strong>Nhân viên</strong><p>Xem lịch được công bố và xuất Excel, không cần đăng nhập.</p></div>
+   </div>
+   <div id="helpDone" hidden>
+    <h3>Bắt đầu thế nào?</h3>
+    <ol class="help-steps">
+     <li><span>1</span><div><strong>Đưa config.js lên GitHub</strong><p>Tải tệp <b>config.js</b> và tải lên thư mục gốc trên GitHub Pages để mọi máy tự kết nối.</p></div></li>
+     <li><span>2</span><div><strong>Xếp lịch tháng</strong><p>Chọn tháng, xếp tự động hoặc chỉnh từng ngày.</p></div></li>
+     <li><span>3</span><div><strong>Công bố lịch</strong><p>Chọn các tháng để nhân viên cùng xem tại index.html.</p></div></li>
+    </ol>
+   </div>
+   <div class="environment"><span>GitHub Pages</span><span>✓ Google Sheets API 2.5</span></div>
+  </aside>
+ </div>
+ <footer class="setup-footer"><span>Cài đặt xong, bắt đầu xếp lịch.</span><a href="admin.html">Đã có tài khoản? Đăng nhập</a></footer>
+</div>
+</main><script src="config.js?v=2.5"></script><script src="assets/appearance.js?v=2.5"></script><script src="assets/core.js?v=2.5"></script><script src="assets/backend.js?v=2.5"></script><script src="assets/setup.js?v=2.5"></script></body></html>
