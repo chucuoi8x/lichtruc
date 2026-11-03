@@ -69,12 +69,12 @@ body{background:var(--bg);color:var(--ink)}
 <dialog id="editDialog" aria-labelledby="editTitle"></dialog><dialog id="personDialog" aria-labelledby="personTitle"></dialog><dialog id="confirmDialog" aria-labelledby="confirmTitle"></dialog><dialog id="issuesDialog" aria-labelledby="issuesTitle"></dialog><dialog id="exportDialog" aria-labelledby="exportTitle"></dialog><dialog id="shareDialog" aria-labelledby="shareTitle"></dialog><dialog id="accountDialog" aria-labelledby="accountTitle"></dialog><dialog id="resetDialog" aria-labelledby="resetTitle"></dialog><dialog id="baseDialog" aria-labelledby="baseTitle"></dialog>
 <input type="file" id="backupInput" accept=".json,application/json" hidden><div id="printArea"></div>
 <div id="appConfig" hidden>{"mode":"viewer"}</div>
+<script src="config.js?v=2.5"></script>
 <script>// Cấu hình kết nối Google Sheets (Google Apps Script Web App URL) cho GitHub Pages.
 window.ROTA_CONFIG = window.ROTA_CONFIG || {
-  scriptUrl: "https://script.google.com/macros/s/AKfycbwZVi5k521z9kwh5Y-gxdAYmwcZfG9r3YBUxo43IH7QGHExDX382ABm5MLQk84kOZomhQ/exec"
+  scriptUrl: "https://script.google.com/macros/s/AKfycbwZVi5k521z9kwh5Y-gxdAYmwcZfG9r3YBUxo43lH7QGHExDX382ABm5MLQk84kOZomhQ/exec"
 };
 </script>
-<script src="config.js?v=2.5"></script>
 <script>(function(root){
   'use strict';
   const defaults={primary:'#28764A',background:'#F0F8E9',sidebar:'#E9F4E1'};
@@ -652,20 +652,36 @@ window.ROTA_CONFIG = window.ROTA_CONFIG || {
     return err;
   }
 
+  function fixKnownUrlTypo(url) {
+    if (typeof url !== 'string') return '';
+    return url.trim().replace('YBUxo43IH7QGHEx', 'YBUxo43lH7QGHEx');
+  }
+
   function getStoredConfig() {
     try {
       if (typeof location !== 'undefined' && location.search) {
         const params = new URLSearchParams(location.search);
         const apiParam = params.get('api') || params.get('scriptUrl');
         if (apiParam && /^https:\/\/script\.google\.com\/macros\/s\//i.test(apiParam.trim())) {
-          const saved = { hosting: 'googlesheets', scriptUrl: apiParam.trim(), sheetName: 'Google Sheets' };
+          const saved = { hosting: 'googlesheets', scriptUrl: fixKnownUrlTypo(apiParam), sheetName: 'Google Sheets' };
           writeStorage(CONFIG_STORE, JSON.stringify(saved));
         }
       }
     } catch {}
-    const fileUrl = (root.ROTA_CONFIG && typeof root.ROTA_CONFIG.scriptUrl === 'string') ? root.ROTA_CONFIG.scriptUrl.trim() : '';
+    try {
+      const raw = readStorage(CONFIG_STORE);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed && typeof parsed === 'object') {
+          if (parsed.scriptUrl) parsed.scriptUrl = fixKnownUrlTypo(parsed.scriptUrl);
+          if (parsed.hosting === 'googlesheets' && parsed.scriptUrl) return parsed;
+          if (parsed.hosting === 'local' && root.ROTA_CANVAS_PREVIEW) return parsed;
+        }
+      }
+    } catch {}
+    const fileUrl = (root.ROTA_CONFIG && typeof root.ROTA_CONFIG.scriptUrl === 'string') ? fixKnownUrlTypo(root.ROTA_CONFIG.scriptUrl) : '';
     if (fileUrl) {
-      return { hosting: 'googlesheets', scriptUrl: fileUrl, sheetName: root.ROTA_CONFIG.sheetName || 'Google Sheets', fromConfigFile: true };
+      return { hosting: 'googlesheets', scriptUrl: fileUrl, sheetName: root.ROTA_CONFIG.sheetName || 'CSDL_Lich_Truc_2_5', fromConfigFile: true };
     }
     try {
       const raw = readStorage(CONFIG_STORE);
@@ -1450,6 +1466,7 @@ window.ROTA_CONFIG = window.ROTA_CONFIG || {
   // Unified Request Dispatcher (Google Sheets Apps Script URL or Local DB)
   // =========================================================================
   async function sendToAppsScript(scriptUrl, payload) {
+    scriptUrl = fixKnownUrlTypo(scriptUrl);
     let response;
     try {
       response = await fetch(scriptUrl, {
