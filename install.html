@@ -1,6 +1,51 @@
 <!doctype html>
 <html lang="vi">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#28764A"><title>Thiết lập Lịch Trực · GitHub Pages + Google Sheets</title><link rel="icon" href="data:,"><link rel="stylesheet" href="assets/setup.css?v=2.5"><link rel="stylesheet" href="assets/theme.css?v=2.5"></head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#28764A">
+<title>Thiết lập Lịch Trực · GitHub Pages + Google Sheets</title>
+<link rel="icon" href="data:,">
+<style>*{box-sizing:border-box}body{margin:0;background:#f3f6f2;color:#263f36;font:14px/1.5 Arial,sans-serif}.setup-wrap{max-width:1060px;padding:24px 26px 24px;margin:0 auto}.setup-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.brand{display:flex;align-items:center;gap:12px;color:#216454;text-decoration:none;font-size:25px;font-weight:700}.brand-icon{width:47px;height:47px;display:grid;place-items:center;border-radius:13px;background:#216454;color:white}.brand-icon svg{width:26px;height:26px}.brand small{display:block;font-size:8px;letter-spacing:2px;margin-top:3px;font-weight:500;color:#738779}.version{font-size:11px;color:#7b8c82}.version span{padding:4px 7px;background:#e5ede6;border-radius:5px;margin-left:5px}.eyebrow,.step-label{font-size:10px;letter-spacing:1.7px;font-weight:700;color:#79917f}.intro h1{font-size:30px;letter-spacing:-.7px;line-height:1.25;margin:8px 0 10px}.intro p{color:#7a897e;margin:0;font-size:14px}.steps{display:flex;list-style:none;padding:0;margin:20px 0 18px;border:1px solid #dde6db;background:#fff;border-radius:13px;overflow:hidden}.steps li{display:flex;align-items:center;gap:12px;flex:1;padding:14px 20px;position:relative;color:#99a49d;font-weight:600;font-size:12px}.steps li+li{border-left:1px solid #edf0eb}.steps li>span{width:29px;height:29px;flex:0 0 29px;display:grid;place-items:center;border:1px solid #dee5dc;border-radius:50%;color:#96a39a;background:#fafbf9}.steps small{display:block;margin-top:2px;font-size:10px;font-weight:400;color:#98a299}.steps .current{color:#216454;background:#f0f6f0}.steps .current>span,.steps .passed>span{background:#216454;border-color:#216454;color:#fff}.steps .passed{color:#587362}.steps .current small{color:#6f8a76}.setup-layout{display:grid;grid-template-columns:minmax(0,1fr) 286px;gap:21px;align-items:start}.setup-card{border:1px solid #dfe7dc;background:#fff;border-radius:15px;padding:24px 29px;box-shadow:0 6px 28px #213f2b03}.panel-heading h2{font-size:22px;letter-spacing:-.5px;line-height:1.3;margin:8px 0}.panel-heading h2:focus,.complete h2:focus{outline:none}.panel-heading p{font-size:12px;color:#829080;margin:0 0 18px}.hosting-options{border:0;margin:0 0 20px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}.hosting-options legend{position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;overflow:hidden}.hosting-choice{border:1px solid #e0e7dc;border-radius:10px;padding:12px;display:flex;justify-content:space-between;align-items:center;gap:6px;cursor:pointer;position:relative;background:#fff;margin:0}.hosting-choice:has(input:checked){border-color:#54846c;background:#f1f7f1;box-shadow:0 0 0 1px #54846c20}.hosting-choice:has(input:focus-visible){outline:2px solid #216454;outline-offset:3px}.hosting-choice strong{font-size:11px}.hosting-choice small{display:block;color:#8b998b;font-size:10px;margin-top:3px}.hosting-choice input{position:absolute;opacity:0;width:1px;height:1px;padding:0;pointer-events:none}.radio-dot{width:15px;height:15px;border:1px solid #d3dfcf;border-radius:50%;flex:0 0 15px}.hosting-choice input:checked~.radio-dot{border:4px solid #34715a;background:white}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px 18px}.field label{display:block;margin:0 0 7px;font-size:12px;font-weight:600}.field label>span{display:block;font-size:10px;color:#8b9788;font-weight:400;margin-top:2px}.field input{width:100%;min-width:0;border:1px solid #d7e2d1;border-radius:8px;padding:11px 12px;background:#fcfdfb;color:#294238;font:13px/1.3 Arial;min-height:41px}.field input::placeholder{color:#a3aea0;font-size:12px}.field input:focus{outline:2px solid #acc9b0;outline-offset:2px}.field small{display:block;font-size:10px;line-height:1.6;color:#8a9883;margin-top:6px;min-height:16px}.password-field{position:relative}.password-field input{padding-right:45px}.reveal{position:absolute;right:5px;top:5px;background:transparent;border:0;color:#71866f;font-size:10px;padding:8px 5px;cursor:pointer;border-radius:4px}.advanced{font-size:11px;color:#7f9080;margin-top:20px}.advanced summary{cursor:pointer;display:list-item;width:max-content}.advanced .narrow{margin-top:13px;max-width:190px}.site-address{display:flex;gap:9px;align-items:center;border-top:1px solid #edf0e9;padding-top:14px;margin:16px 0}.site-address>span{border:1px solid #e0e8dc;border-radius:6px;padding:3px 7px;color:#6b8a73}.site-address div{min-width:0}.site-address div>span{display:block;font-size:10px;color:#919d8b}.site-address strong{display:block;overflow-wrap:anywhere;font-size:11px;font-weight:400;color:#668067;margin-top:2px}button,a{touch-action:manipulation}.primary,.secondary{border-radius:8px;font:600 12px/1.5 Arial;cursor:pointer;padding:12px 17px;min-height:43px}.primary{display:flex;justify-content:center;align-items:center;gap:16px;width:100%;border:1px solid #216454;background:#216454;color:#fff}.primary:hover{background:#194e41}.primary:disabled{opacity:.6;cursor:wait}.primary span{font-size:17px;line-height:1}.secondary{border:1px solid #dce5d7;background:white;color:#60765f}.secondary:hover{background:#f5f8f2}button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid #216454;outline-offset:3px}.form-note{text-align:center;font-size:10px;color:#98a38e;line-height:1.7;margin:12px 0 0}.help-card{border:1px solid #e2e8dc;background:#edf3e9;border-radius:14px;padding:22px}.help-icon{height:25px;width:25px;display:grid;place-items:center;border-radius:7px;background:#dce9d7;color:#628269;font-weight:700;font-size:13px;margin-bottom:12px}.help-card h3{font-size:14px;margin:0 0 10px;color:#48694c}.help-card p{font-size:11px;line-height:1.75;color:#839179;margin:0 0 12px}.help-card b{font-weight:600;color:#647d60}.help-steps{list-style:none;padding:0;margin:18px 0}.help-steps li{display:flex;align-items:flex-start;gap:10px;margin:0 0 17px}.help-steps li>span{flex:0 0 20px;width:20px;height:20px;display:grid;place-items:center;border-radius:50%;border:1px solid #d2dfca;color:#78916d;font-size:10px;margin-top:1px}.help-steps strong{font-size:11px;color:#587552}.help-steps p{font-size:11px;margin:3px 0 0}.help-tip{font-size:10px;line-height:1.8;color:#7b8e70;background:#e4eedf;border-radius:8px;padding:12px}.environment{font-size:9px;color:#8b9c7f;display:flex;justify-content:space-between;gap:10px;border-top:1px solid #dce6d6;margin-top:21px;padding-top:13px}.unavailable{color:#b76b3f}.setup-footer{display:flex;justify-content:space-between;gap:12px;color:#9aa58e;font-size:10px;margin-top:20px}.setup-footer a{color:#799075;text-decoration:none}.setup-footer a:hover{text-decoration:underline}.error{white-space:pre-line;background:#fff1eb;border:1px solid #f0d9ca;color:#a15e3e;border-radius:8px;padding:12px 14px;font-size:12px;line-height:1.7;margin-bottom:20px;overflow-wrap:anywhere}.connected,.stored-note{display:flex;align-items:flex-start;gap:10px;background:#f0f6ed;border:1px solid #e0eada;border-radius:9px;padding:12px;margin-bottom:23px;font-size:11px;color:#527651}.connected small{display:block;font-size:10px;color:#8b9d82;overflow-wrap:anywhere;margin-top:3px}.connected>div{min-width:0;flex:1}.tiny-check{width:19px;height:19px;display:grid;place-items:center;border-radius:50%;background:#d9e9d3;color:#578451;font-size:10px;flex:0 0 19px}.text-button{font:11px Arial;color:#6f8b69;border:0;padding:4px 0;background:none;cursor:pointer;text-decoration:underline}.plain-note{display:flex;align-items:center;gap:9px;padding:15px 0;border-bottom:1px solid #edf0e9;margin-top:8px;color:#80907b}.plain-note>span{border:1px solid #cad9c4;border-radius:50%;width:15px;height:15px;flex:0 0 15px;text-align:center;font-size:10px;line-height:14px}.plain-note p{font-size:11px;line-height:1.7;margin:0}.form-actions{display:flex;gap:12px;margin-top:22px}.form-actions .primary{flex:1}.role-note{margin-top:23px}.role-note strong{font-size:11px;color:#5d7a56}.role-note p{margin-top:4px}.stored-note p{font-size:11px;color:#819779;margin:4px 0 0}.summary{padding:0;margin:0 0 20px}.summary div{border-bottom:1px solid #edf0e9;padding:11px 0}.summary dt{font-size:10px;color:#95a08d}.summary dd{font-size:12px;color:#4f7052;margin:3px 0 0;overflow-wrap:anywhere}.complete{text-align:center;padding:19px 8px}.success-mark{display:grid;place-items:center;height:58px;width:58px;border-radius:50%;background:#e8f3e4;color:#4f8550;font-size:28px;margin:0 auto 21px}.complete .step-label{display:block}.complete h2{font-size:26px;line-height:1.3;margin:12px 0}.complete>p,.done-card>p{color:#82937b;font-size:12px;line-height:1.8;margin:0 auto 19px;max-width:360px}.completion-list{display:grid;gap:9px;font-size:11px;color:#799572;margin:23px auto 29px}.link-button{display:flex;text-align:center;text-decoration:none;justify-content:center;align-items:center;width:100%;margin-top:11px}.complete .form-note{font-size:10px;margin:18px 0 0;max-width:none}.done-card{background:white;border:1px solid #dfe7dc;border-radius:16px;text-align:center;max-width:470px;margin:75px auto;padding:35px}.done-card h1{font-size:26px;line-height:1.3}.done-card .link-button{margin-top:13px}[hidden]{display:none!important}
+@media(max-width:850px){.setup-layout{grid-template-columns:minmax(0,1fr) 240px;gap:15px}.setup-card{padding:23px}.setup-wrap{padding:25px 20px}.help-card{padding:18px}.steps li{padding:15px}.hosting-options{gap:8px}.hosting-choice{padding:10px}.hosting-choice strong{font-size:10px}.field-grid{gap:18px 14px}}
+@media(max-width:680px){.setup-wrap{padding:22px 16px}.setup-header{margin-bottom:29px}.brand{font-size:22px}.version{font-size:9px}.brand small{font-size:7px}.brand-icon{width:41px;height:41px}.intro h1{font-size:26px}.intro p{font-size:12px;line-height:1.7}.steps{margin-top:23px}.steps li{padding:13px 8px;gap:7px;font-size:9px;justify-content:center}.steps li>span{width:23px;height:23px;flex-basis:23px;font-size:10px}.steps small{display:none}.setup-layout{grid-template-columns:1fr}.setup-card{padding:22px 18px}.panel-heading h2{font-size:21px}.field-grid{gap:17px 14px}.field input{font-size:13px}.field input::placeholder{font-size:10px}.hosting-choice strong{font-size:11px}.help-card{padding:20px;margin-top:3px}.help-steps{display:grid;gap:10px;margin-bottom:14px}.help-steps li{margin:0}.help-icon{float:left;margin:0 10px 0 0}.help-card h3{min-height:25px;line-height:25px}.help-tip{margin-top:14px}.setup-footer{font-size:9px;line-height:1.8}.done-card{margin:35px auto;padding:29px 22px}}
+@media(max-width:380px){.field-grid{grid-template-columns:1fr}.setup-footer{flex-direction:column;gap:6px}.steps li{font-size:8px}.steps li>span{width:21px;height:21px;flex-basis:21px}.hosting-choice strong{font-size:10px}}
+
+:root{--ink:#233d2c;--muted:#6e806b;--green:#28764a;--green-dark:#1c5935;--mint:#e6f4dd;--line:#dbe9d3;--paper:#fff;--bg:#f0f8e9;--shadow:0 8px 30px #2e552b0c}
+body{background:var(--bg);color:var(--ink)}
+.sidebar{background:var(--sidebar-bg);border-right-color:var(--line)}.topbar{background:var(--soft);border-bottom-color:var(--line)}.brand{color:var(--nav-ink)}.brand-mark{background:var(--green);box-shadow:0 3px 9px #2b7b4a20}.nav-item{color:var(--nav-muted)}.nav-item:hover{background:var(--nav-active)}.nav-item.active{background:var(--nav-active);color:var(--nav-active-text)}.nav-note{background:var(--nav-note-bg);border-color:var(--line);color:var(--nav-note-ink)}.nav-note strong{color:var(--nav-note-ink)}.profile{background:var(--mint);color:var(--accent-ink);border-color:var(--line)}.breadcrumb{color:var(--muted)}.breadcrumb strong{color:var(--accent-ink)}
+.btn.primary{background:var(--green);border-color:var(--green)}.btn.primary:hover{background:var(--green-dark)}.btn:not(.primary):not(.danger):hover{background:var(--mint)}.login-button{min-width:94px;padding:10px 17px;box-shadow:0 3px 10px #2b75451a;font-weight:700}.card,.metric,.stats-number{border-color:var(--line);box-shadow:0 4px 16px #31552804}.card-head{border-bottom-color:var(--line)}.toolbar{border-color:var(--line)}.metric-icon{background:var(--mint);color:var(--accent-ink)}.metric-value{color:var(--accent-ink)}.card-title{color:var(--accent-ink)}.card-subtitle{color:#7b8f71}.page-heading h1{color:var(--page-ink)}.page-heading p{color:var(--page-muted)}.eyebrow{color:var(--page-muted)}
+.calendar-grid .day{border-color:var(--line);background:#fff}.calendar-grid .day:hover{border-color:#8eb87a;box-shadow:0 0 0 2px #b9d9a643}.calendar-grid .day.weekend{background:#fffcf4;border-color:#e9e6d5}.calendar-grid .day.outside{background:#f4f8ef;color:#a6b49b;border-color:transparent}.lunar-month-caption{background:var(--mint);border-color:var(--line);color:var(--accent-ink)}.weekdays span{color:#708868}.day-number{color:#34513b}.lunar-date{color:#8c7251}.lunar-special{color:#b36320}.calendar-foot{background:#fcfef9;border-color:var(--line)}
+.person-chip{background:var(--chip-color,#e6eedf);color:var(--chip-text,#5c7355);border-left:0;border-radius:6px;padding:6px 8px;font-size:10px;font-weight:750;letter-spacing:.15px;box-shadow:0 2px 5px #193a1e0b;line-height:1.4}.day .person-chip{color:var(--chip-text,#5c7355);background:var(--chip-color,#e6eedf);border-left:0}.avatar{background:var(--chip-color,#e6eedf);color:var(--chip-text,#5c7355);font-weight:700;box-shadow:0 2px 5px #193a1e08}.mini-track{height:4px;background:var(--mint)}.person-stat-name{color:#42603f}.allocation-foot{background:var(--soft);border-color:var(--line);color:#7d916f}.rule-card{background:var(--mint);border-color:var(--line);color:#6b835f}.rule-card h3{color:var(--accent-ink)}
+.data-table th{background:var(--soft);color:#789368;border-color:var(--line)}.data-table td{border-color:#e8f0df}.data-table tr.clickable:hover{background:#edf7e5}.table-tag{background:var(--mint);color:var(--accent-ink)}.table-tag.warn{background:#fff0d5;color:#9f762b}.account-note{background:var(--soft);color:#728b62;border-color:var(--line)}.account-actions{display:flex;align-items:center;flex-wrap:wrap;gap:5px;min-width:184px}.account-actions .btn{min-height:31px;padding:6px 10px;font-size:10px;gap:5px}.account-actions svg{width:13px;height:13px}.danger-outline{color:#a34b3e!important;border-color:#e8cfc5!important;background:#fff9f6!important}.danger-outline:hover{background:#fff0e8!important}.accounts-table strong{color:#35563b;font-size:12px}
+.activity-table{min-width:790px}.activity-table th:first-child{width:155px}.activity-table th:nth-child(2){width:165px}.activity-table th:nth-child(3){width:165px}.activity-table td{vertical-align:top;font-size:11px;padding:11px 17px}.activity-table time{font-size:10px;white-space:nowrap;color:#738568}.activity-table td>strong{font-size:11px;font-weight:600;color:#3f613e}.actor-username{display:block;font-size:10px;color:#93a285;margin-top:3px}.event-pill{display:inline-block;padding:4px 8px;border-radius:6px;background:var(--mint);color:var(--accent-ink);font-size:10px;white-space:nowrap;font-weight:600}.event-danger{background:#fff0e5;color:#ac6246}.activity-target{display:block;margin-bottom:3px}.activity-detail{display:block;color:#7b8c71;font-size:10px;line-height:1.65}.activity-empty{text-align:center!important;padding:42px 20px!important;color:#8a9e7a}.activity-note{font-size:10px;color:#8ba078;line-height:1.8;margin:16px 3px}.pagination{padding:16px 19px;border-top:1px solid var(--line);background:var(--soft);display:flex;justify-content:space-between;align-items:center;gap:16px;color:#819574;font-size:10px;border-radius:0 0 11px 11px}.pagination>div{display:flex;align-items:center;gap:12px}.pagination .btn{font-size:10px;min-height:31px;padding:6px 10px;gap:5px}.pagination svg{width:12px;height:12px}.pagination>div>span{white-space:nowrap}
+.brand-icon{background:var(--green)}.setup-wrap .intro h1,.setup-wrap .panel-heading h2{color:var(--page-ink)}.setup-wrap .setup-card,.setup-wrap .done-card{border-color:var(--line)}.setup-wrap .help-card{background:var(--mint);border-color:var(--line)}.setup-wrap .steps .current{background:var(--mint)}.setup-wrap .steps .current>span,.setup-wrap .steps .passed>span{background:var(--green);border-color:var(--green)}.setup-wrap .primary{background:var(--green);border-color:var(--green)}.setup-wrap .hosting-choice:has(input:checked){background:var(--mint);border-color:var(--green)}.setup-wrap .help-tip{background:var(--mint-strong)}.setup-wrap .site-address{border-color:var(--line)}.setup-wrap input{border-color:var(--line)}.setup-wrap .environment{border-color:var(--line)}.foot{color:#8b9f7d}
+@media(min-width:1550px){.person-chip{font-size:11px;padding:6px 9px}}@media(max-width:1190px){.person-chip{font-size:9px;padding:5px 6px}}@media(max-width:1010px){.person-chip{font-size:10px}}@media(max-width:740px){.topbar{background:var(--bg)}.login-button{min-width:79px!important;padding:7px 12px!important;font-size:11px!important}.web-admin .nav-item{flex:0 0 auto}.pagination{flex-wrap:wrap;padding:13px 15px}.pagination>div{gap:10px}.account-actions{min-width:175px}.activity-table td{padding:10px 14px}}@media print{body{background:#fff;color:#000}}
+
+.sidebar .brand{color:var(--nav-ink)}.sidebar .nav-caption,.sidebar-foot{color:var(--nav-muted)}.brand-mark,.brand-icon{color:var(--primary-text)}.btn.primary,.setup-wrap .primary{color:var(--primary-text)}.nav-item.active{color:var(--nav-active-text)}.nav-note strong{color:var(--nav-note-ink)}.page-footer,.web-status-line,.activity-note{color:var(--page-muted)}.brand>svg{background:var(--green);stroke:var(--primary-text)}.card .eyebrow{color:var(--muted)}.card .help-copy{color:var(--muted)}
+.logout-button{border:1px solid var(--green);background:var(--mint);color:var(--accent-ink);min-width:109px;padding:9px 14px;font-weight:700;border-radius:8px;gap:7px}.logout-button:hover{background:var(--mint-strong)}.logout-button svg{width:17px;height:17px}.logout-button:disabled{cursor:wait}
+.appearance-layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:21px;align-items:start}.appearance-presets{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:22px}.theme-preset{border:1px solid var(--line);border-radius:9px;background:#fff;padding:13px 11px;text-align:left;color:#50634a;font-size:11px;display:grid;gap:11px}.theme-preset.selected{border-color:var(--green);box-shadow:0 0 0 1px var(--green)}.preset-swatches{display:flex;gap:4px}.preset-swatches i{width:24px;height:24px;border-radius:6px;border:1px solid #0000000c}.appearance-body{padding:22px}.appearance-fields{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.color-control{display:flex;align-items:center;gap:8px}.color-control input[type=color]{width:48px;height:42px;min-width:48px;padding:4px;border-radius:7px;cursor:pointer}.color-control code{font-size:10px;color:#7b8a71}.appearance-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:9px;border-top:1px solid var(--line);padding-top:20px;margin-top:22px}.theme-preview{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg)}.theme-preview-header{padding:14px;background:var(--sidebar-bg);color:var(--nav-ink);font-size:12px;font-weight:650}.theme-preview-body{padding:18px}.theme-preview-card{border:1px solid var(--line);border-radius:8px;padding:17px;background:white;font-size:11px;line-height:1.7;color:#52634b}.theme-preview-card strong{display:block;margin-bottom:7px;color:var(--accent-ink)}.theme-preview-chip{display:inline-block;margin-top:13px;background:var(--green);color:var(--primary-text);border-radius:6px;padding:6px 13px;font-size:10px;font-weight:650}.appearance-note{font-size:11px;color:var(--page-muted);line-height:1.8;margin:15px 2px}.balance-warning{color:#9d6b2e}.balance-good{color:var(--accent-ink)}
+.appearance-fieldset{border:0;padding:0;margin:0;min-width:0}.setup-wrap .panel-heading h2,.setup-wrap .done-card h1{color:var(--accent-ink)}.setup-wrap .intro p,.setup-footer,.foot{color:var(--page-muted)}.nav-item:hover{color:var(--nav-active-text)}
+@media(max-width:1010px){.appearance-layout{grid-template-columns:1fr}.theme-preview{display:none}}@media(max-width:740px){.logout-button{min-width:86px;padding:7px 10px!important;font-size:10px!important}.appearance-presets{grid-template-columns:1fr 1fr;padding:17px}.appearance-fields{grid-template-columns:1fr;gap:12px}.appearance-body{padding:18px}.color-control input[type=color]{width:56px}.appearance-actions .btn{font-size:10px}.preset-swatches i{height:22px;width:22px}}
+.brand{color:var(--page-ink)}.sidebar .brand{color:var(--nav-ink)}#authForm button[type=submit]{background:var(--green);border-color:var(--green);color:var(--primary-text)}.card a.viewer{border-color:var(--line);color:var(--accent-ink)}
+
+.btn.primary:hover,.setup-wrap .primary:hover,#authForm button[type=submit]:hover{color:var(--primary-hover-text);background:var(--green-dark);border-color:var(--green-dark)}
+.base-notice{display:flex;align-items:center;gap:14px;padding:15px 18px;margin:0 0 20px;border:1px solid var(--line);border-radius:12px;background:var(--soft);color:var(--ink)}
+.base-notice>svg{width:22px;height:22px;flex-shrink:0;color:var(--green)}
+.base-notice>div{flex:1}.base-notice strong{font-size:13px}.base-notice p{margin:4px 0 0;font-size:12px;line-height:1.6;color:var(--muted)}
+.base-notice small{display:block;margin-top:5px;font-size:11px;line-height:1.6;color:var(--muted)}
+#baseDialog{width:min(720px,calc(100vw - 28px));max-width:720px}
+.base-table-wrap{margin-top:15px;max-height:48vh;overflow:auto;border:1px solid var(--line);border-radius:8px}
+.base-table-wrap th{position:sticky;top:0;background:var(--soft);z-index:1}.base-table-wrap td{font-size:12px}.base-changed{background:var(--mint)}
+.base-legacy,.day-base-note{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:12px;line-height:1.7;color:var(--ink)}
+.day-base-note{margin-top:14px}.day-base-note p{margin:4px 0 0;color:var(--muted)}
+.fixed-notice{display:flex;align-items:center;gap:14px;padding:15px 18px;margin-bottom:16px;border:1px solid var(--line);border-left:4px solid var(--green);border-radius:12px;background:#fff;color:var(--ink)}
+.fixed-notice>svg{width:22px;height:22px;flex-shrink:0;color:var(--green)}.fixed-notice>div{flex:1}.fixed-notice strong{font-size:13px}.fixed-notice p{font-size:12px;margin:6px 0;line-height:1.7}.fixed-notice small{font-size:11px;line-height:1.6;display:block;color:var(--muted)}
+.fixed-person-days{font-size:11px;margin-top:6px;color:var(--accent-ink)}
+@media(max-width:740px){.fixed-notice{flex-wrap:wrap;align-items:flex-start}.fixed-notice>div{flex-basis:calc(100% - 40px)}.fixed-notice>.btn{margin-left:36px}}
+@media(max-width:740px){.base-notice{align-items:flex-start;flex-wrap:wrap}.base-notice>div{flex-basis:calc(100% - 40px)}.base-notice>.btn{margin-left:36px}.base-table-wrap .data-table{min-width:0}.base-table-wrap th,.base-table-wrap td{padding:11px 8px}.base-table-wrap .table-tag{display:block;width:max-content;margin-top:4px}}
+</style>
+</head>
 <body><main class="setup-wrap">
 <header class="setup-header"><a class="brand" href="index.html"><span class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 11h18m-13 4h2m4 0h2"/></svg></span><span>Lịch Trực<small>SẮP LỊCH DỄ DÀNG</small></span></a><span class="version">GitHub Pages + Google Sheets <span>2.5</span></span></header>
 
@@ -29,15 +74,15 @@
      <div id="gsFields" class="field-grid" style="grid-template-columns:1fr">
       <div class="field">
        <label for="scriptUrl">Địa chỉ Web App (Google Apps Script URL) <span>URL kết thúc bằng /exec sau khi triển khai Code.gs trên Google Sheets</span></label>
-       <input id="scriptUrl" name="scriptUrl" autocomplete="off" spellcheck="false" required maxlength="500" placeholder="https://script.google.com/macros/s/AKfycb.../exec">
-       <small id="hostHint">Dán đúng URL Ứng dụng web (Web app) được cấp khi bấm Triển khai (Deploy) trong Google Apps Script.</small>
+       <input id="scriptUrl" name="scriptUrl" autocomplete="off" spellcheck="false" required maxlength="500" value="https://script.google.com/macros/s/AKfycbwZVi5k521z9kwh5Y-gxdAYmwcZfG9r3YBUxo43IH7QGHExDX382ABm5MLQk84kOZomhQ/exec" placeholder="https://script.google.com/macros/s/AKfycb.../exec">
+       <small id="hostHint">Đã điền sẵn URL Google Apps Script của bạn. Bấm nút bên dưới để kiểm tra kết nối và tiếp tục.</small>
       </div>
       <div class="field">
        <label for="sheetName">Ghi chú tên bảng tính (Tùy chọn) <span>Hiển thị để nhận diện</span></label>
-       <input id="sheetName" name="sheetName" autocomplete="off" maxlength="120" value="Lịch Trực Google Sheets">
+       <input id="sheetName" name="sheetName" autocomplete="off" maxlength="120" value="CSDL_Lich_Truc_2_5">
       </div>
      </div>
-     <div class="site-address"><span aria-hidden="true">↗</span><div><span>Địa chỉ website đã tự nhận</span><strong id="detectedSiteUrl">https://github.io/lichtruc</strong></div></div>
+     <div class="site-address"><span aria-hidden="true">↗</span><div><span>Địa chỉ website đã tự nhận</span><strong id="detectedSiteUrl">https://chucuoi8x.github.io/lichtruc</strong></div></div>
      <button type="submit" id="checkButton" class="primary">Kiểm tra kết nối & tiếp tục <span aria-hidden="true">→</span></button>
      <p class="form-note">Phần mềm sẽ tự động tạo đủ các bảng (sheet) dữ liệu trong Google Sheets của bạn.</p>
     </form>
@@ -78,11 +123,11 @@
     <h3>Lấy URL Google Sheets ở đâu?</h3>
     <p>Chỉ mất 1 phút trên Google Drive của bạn:</p>
     <ol class="help-steps">
-     <li><span>1</span><div><strong>Tạo Google Sheets & mở Apps Script</strong><p>Tạo bảng tính mới, vào <b>Tiện ích mở rộng → Apps Script</b>.</p></div></li>
+     <li><span>1</span><div><strong>Tạo Google Sheets & mở Apps Script</strong><p>Mở bảng tính <b>CSDL_Lich_Truc_2_5</b>, vào <b>Tiện ích mở rộng → Apps Script</b>.</p></div></li>
      <li><span>2</span><div><strong>Dán mã Code.gs</strong><p>Chép toàn bộ nội dung tệp <b>google-sheets/Code.gs</b> dán vào trình soạn thảo và bấm Lưu.</p></div></li>
      <li><span>3</span><div><strong>Triển khai Ứng dụng web</strong><p>Bấm <b>Triển khai → Triển khai mới → Ứng dụng web</b>. Chọn Thực thi dưới dạng: <b>Tôi</b> và Ai có quyền truy cập: <b>Bất kỳ ai</b>, rồi sao chép URL dán vào ô bên trái.</p></div></li>
     </ol>
-    <div class="help-tip">Sau khi cài xong, tải tệp <b>config.js</b> đưa lên kho GitHub Pages để mọi điện thoại/máy tính tự nhận kết nối.</div>
+    <div class="help-tip">Các tệp <b>index.html</b>, <b>admin.html</b> và <b>install.html</b> nay đã được tích hợp sẵn toàn bộ CSS & JS bên trong để không bao giờ bị lỗi thiếu giao diện trên GitHub Pages.</div>
    </div>
    <div id="helpLocal" hidden>
     <h3>Chế độ lưu trên trình duyệt</h3>
@@ -101,7 +146,7 @@
    <div id="helpDone" hidden>
     <h3>Bắt đầu thế nào?</h3>
     <ol class="help-steps">
-     <li><span>1</span><div><strong>Đưa config.js lên GitHub</strong><p>Tải tệp <b>config.js</b> và tải lên thư mục gốc trên GitHub Pages để mọi máy tự kết nối.</p></div></li>
+     <li><span>1</span><div><strong>Đưa lên GitHub</strong><p>Tải <b>index.html</b>, <b>admin.html</b>, <b>install.html</b> (và <b>config.js</b>) lên kho GitHub Pages.</p></div></li>
      <li><span>2</span><div><strong>Xếp lịch tháng</strong><p>Chọn tháng, xếp tự động hoặc chỉnh từng ngày.</p></div></li>
      <li><span>3</span><div><strong>Công bố lịch</strong><p>Chọn các tháng để nhân viên cùng xem tại index.html.</p></div></li>
     </ol>
@@ -111,4 +156,1488 @@
  </div>
  <footer class="setup-footer"><span>Cài đặt xong, bắt đầu xếp lịch.</span><a href="admin.html">Đã có tài khoản? Đăng nhập</a></footer>
 </div>
-</main><script src="config.js?v=2.5"></script><script src="assets/appearance.js?v=2.5"></script><script src="assets/core.js?v=2.5"></script><script src="assets/backend.js?v=2.5"></script><script src="assets/setup.js?v=2.5"></script></body></html>
+</main>
+<script>// Cấu hình kết nối Google Sheets (Google Apps Script Web App URL) cho GitHub Pages.
+window.ROTA_CONFIG = window.ROTA_CONFIG || {
+  scriptUrl: "https://script.google.com/macros/s/AKfycbwZVi5k521z9kwh5Y-gxdAYmwcZfG9r3YBUxo43IH7QGHExDX382ABm5MLQk84kOZomhQ/exec"
+};
+</script>
+<script src="config.js?v=2.5"></script>
+<script>(function(root){
+  'use strict';
+  const defaults={primary:'#28764A',background:'#F0F8E9',sidebar:'#E9F4E1'};
+  const presets=[{name:'Xanh lá nhạt',...defaults},{name:'Xanh dương',primary:'#2463A8',background:'#EFF6FC',sidebar:'#E5EFFA'},{name:'Tím lavender',primary:'#7651A6',background:'#F6F1FC',sidebar:'#EEE5F8'},{name:'Cam ấm',primary:'#B05A29',background:'#FFF7EF',sidebar:'#FAEDDD'},{name:'Trung tính',primary:'#566554',background:'#F5F6F2',sidebar:'#E9EDE4'}];
+  function normalize(input){if(!input||typeof input!=='object')throw new Error('Chọn đủ ba màu giao diện.');const value={};for(const key of ['primary','background','sidebar']){if(typeof input[key]!=='string'||!/^#[a-f\d]{6}$/i.test(input[key]))throw new Error('Màu giao diện cần có dạng #RRGGBB.');value[key]=input[key].toUpperCase();}return value;}
+  function mix(a,b,ratio){return '#'+[1,3,5].map(i=>Math.round(parseInt(a.slice(i,i+2),16)*ratio+parseInt(b.slice(i,i+2),16)*(1-ratio)).toString(16).padStart(2,'0')).join('').toUpperCase();}
+  function luma(color){return [1,3,5].map(i=>parseInt(color.slice(i,i+2),16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0);}
+  function ink(color){const light=luma(color),dark=luma('#233D2C');if((Math.max(light,dark)+.05)/(Math.min(light,dark)+.05)>=4.5)return '#233D2C';return 1.05/(light+.05)>=4.5?'#FFFFFF':'#000000';}
+  function css(input){const t=normalize(input),p=t.primary,bg=t.background,side=t.sidebar,nav=mix(side,p,.7),note=mix(side,'#FFFFFF',.85);
+    const vars={'--green':p,'--green-dark':mix(p,'#000000',.8),'--primary-text':ink(p),'--primary-hover-text':ink(mix(p,'#000000',.8)),'--bg':bg,'--sidebar-bg':side,'--page-ink':ink(bg),'--page-muted':mix(ink(bg),bg,.75),'--nav-ink':ink(side),'--nav-muted':mix(ink(side),side,.75),'--nav-active':nav,'--nav-active-text':ink(nav),'--nav-note-bg':note,'--nav-note-ink':ink(note),'--mint':mix(p,'#FFFFFF',.1),'--mint-strong':mix(p,'#FFFFFF',.18),'--soft':mix(p,'#FFFFFF',.045),'--line':mix(p,'#FFFFFF',.17),'--accent-ink':mix(p,'#000000',.45)};
+    return ':root{'+Object.entries(vars).map(([k,v])=>k+':'+v+';').join('')+'}';
+  }
+  function apply(input){let el=document.getElementById('systemTheme');if(!el){el=document.createElement('style');el.id='systemTheme';document.head.append(el);}el.textContent=css(input);const meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.content=normalize(input).primary;}
+  const api={defaults,presets,normalize,css,apply,luma,ink};root.RotaAppearance=api;if(typeof module!=='undefined')module.exports=api;
+})(globalThis);
+</script>
+<script>(function (root) {
+  'use strict';
+  const DAY = 86400000;
+  const pad = n => String(n).padStart(2, '0');
+  function dayNumber(iso) {
+    if (typeof iso !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return NaN;
+    const [y,m,d] = iso.split('-').map(Number);
+    const dt = new Date(Date.UTC(y,m-1,d));
+    return dt.toISOString().slice(0,10) === iso ? Math.floor(+dt / DAY) : NaN;
+  }
+  function daysInMonth(key) {
+    const [y,m] = key.split('-').map(Number);
+    return new Date(Date.UTC(y,m,0)).getUTCDate();
+  }
+  function monthDates(key) { return Array.from({length:daysInMonth(key)},(_,i)=>key+'-'+pad(i+1)); }
+  function weekday(iso) { return new Date(dayNumber(iso)*DAY).getUTCDay(); }
+  function isWeekend(iso) { return [0,6].includes(weekday(iso)); }
+  function adjacentMonth(key,delta) {
+    const [y,m] = key.split('-').map(Number); const d = new Date(Date.UTC(y,m-1+delta,1));
+    return d.getUTCFullYear()+'-'+pad(d.getUTCMonth()+1);
+  }
+  const defaults = [
+    ['quang','QUANG','#18794E'],['dung-em','DŨNG EM','#B45309'],['lam','LÂM','#4F46C8'],
+    ['luc','LỰC','#BE3F65'],['dung','DŨNG','#176D9C'],['thuc','THỨC','#80620E'],['linh','LINH','#7C3FBD']
+  ];
+  function createState(initialKey) {
+    const key = initialKey || adjacentMonth(new Date().toISOString().slice(0,7),1);
+    return {schema:1,teamName:'Phòng CNTT',viewMonth:key,
+      people:defaults.map(([id,name,color])=>({id,name,color,active:true,blockedWeekdays:id==='dung'?[6,0]:[],offDates:[],fixedMonthDays:id==='dung'?[5,11,17,23]:[]})),
+      settings:{mode:'progressive',restDays:1,anchorDate:key+'-01',startPersonId:'quang'},months:{}};
+  }
+  function personProblem(person,date) {
+    if (!person) return 'Không tìm thấy nhân sự';
+    if (!person.active) return 'Nhân sự đang tạm ngừng';
+    if (person.blockedWeekdays.includes(weekday(date))) return 'Trùng thứ không trực';
+    if (person.offDates.includes(date)) return 'Trùng ngày nghỉ';
+    return '';
+  }
+  const baseEntries = month => month.baseEntries || month.entries;
+  const copyBase = entries => entries.map(({date,personId})=>({date,personId}));
+  function planningState(state,key) {
+    return {...state,months:Object.fromEntries(Object.entries(state.months).map(([k,m])=>[k,k===key?m:{...m,entries:baseEntries(m)}]))};
+  }
+  function editDuty(month,date,values) {
+    if(!month.baseEntries){month.baseEntries=copyBase(month.entries);month.baseSource='existing';}
+    const old=month.entries.find(e=>e.date===date),base=month.baseEntries.find(e=>e.date===date);
+    if(!old||!base)throw new Error('Không tìm thấy ngày cần sửa.');
+    if(month.baseSource==='manual'&&!old.personId&&!base.personId)base.personId=values.personId;
+    month.entries=month.entries.map(e=>e.date===date?{...e,...values,date}:e);
+    return month;
+  }
+  function historical(state,key) {
+    const counts = {}, weekends = {}, last = {};
+    state.people.forEach(p=>{counts[p.id]=0;weekends[p.id]=0;});
+    Object.keys(state.months).filter(k=>k<key).sort().forEach(k=> {
+      state.months[k].entries.forEach(e=> {
+        if (!e.personId) return;
+        counts[e.personId]=(counts[e.personId]||0)+1;
+        weekends[e.personId]=(weekends[e.personId]||0)+(isWeekend(e.date)?1:0);
+        last[e.personId]=Math.max(last[e.personId]??-Infinity,dayNumber(e.date));
+      });
+    });
+    return {counts,weekends,last};
+  }
+  function fixedSchedule(state,key){
+    const dates=monthDates(key),old=state.months[key],locks=new Map((old?.entries||[]).filter(e=>e.locked).map(e=>[e.date,e])),pins=new Map(),byPerson=new Map(),moves=[],issues=[];
+    const other=Object.entries(state.months).filter(([k])=>k!==key).flatMap(([,m])=>baseEntries(m));
+    for(const p of state.people.filter(p=>p.active&&(p.fixedMonthDays||[]).length)){
+      const chosen=new Set();byPerson.set(p.id,chosen);
+      for(const requested of p.fixedMonthDays){
+        const target=key+'-'+pad(Math.min(requested,dates.length)),day=dayNumber(target);
+        const available=dates.filter(date=>!personProblem(p,date)&&!chosen.has(date)&&(!locks.has(date)||locks.get(date).personId===p.id)&&!pins.has(date)
+          &&![...chosen].some(d=>Math.abs(dayNumber(d)-dayNumber(date))<=state.settings.restDays)
+          &&!other.some(e=>e.personId===p.id&&Math.abs(dayNumber(e.date)-dayNumber(date))<=state.settings.restDays)
+          &&![...locks.values()].some(e=>e.date!==date&&e.personId===p.id&&Math.abs(dayNumber(e.date)-dayNumber(date))<=state.settings.restDays))
+          .sort((a,b)=>Math.abs(dayNumber(a)-day)-Math.abs(dayNumber(b)-day)||a.localeCompare(b));
+        const date=available[0];
+        if(!date){issues.push({date:target,type:'fixed',message:'Không tìm được ngày phù hợp cho ca cố định '+requested+' của '+p.name+'. Kiểm tra ca khóa, ngày nghỉ và khoảng nghỉ.'});continue;}
+        chosen.add(date);pins.set(date,{date,personId:p.id,locked:false,note:old?.entries.find(e=>e.date===date)?.note||''});
+        if(date!==target)moves.push({personId:p.id,requested,date});
+      }
+    }
+    return {pins,byPerson,moves,issues};
+  }
+  function plannedLocks(state,key,options){return new Map([...options.fixed.pins,...(state.months[key]?.entries||[]).filter(e=>e.locked).map(e=>[e.date,e])]);}
+  function allowedFor(p,date,options){return !personProblem(p,date)&&(!options.fixed.byPerson.has(p.id)||options.fixed.byPerson.get(p.id).has(date));}
+  function weekendLimit(state,key){
+    const fixed=fixedSchedule(state,key),dates=monthDates(key),eligible=state.people.filter(p=>p.active&&dates.some(d=>isWeekend(d)&&allowedFor(p,d,{fixed})));
+    return {eligible:eligible.length,total:dates.filter(isWeekend).length,limit:eligible.length?Math.ceil(dates.filter(isWeekend).length/eligible.length):0};
+  }
+  function beamGenerate(state,key,options={}) {
+    const active=state.people.filter(p=>p.active), dates=monthDates(key), old=state.months[key];
+    const locks=Object.fromEntries(plannedLocks(state,key,options));
+    const hist=historical(state,key), rest=state.settings.restDays;
+    const start=Math.max(0,active.findIndex(p=>p.id===state.settings.startPersonId));
+    const anchor=dayNumber(state.settings.anchorDate);
+    const future = Object.values(state.months).flatMap(m=>m.entries).filter(e=>e.personId&&e.date>dates.at(-1)&&dayNumber(e.date)-dayNumber(dates.at(-1))<=rest);
+    const lockedAhead=Object.values(locks).filter(e=>e.personId).concat(future);
+    let serial=0;
+    let beam=[{score:0,entries:[],counts:{},weekends:{},last:{...hist.last},serial:serial++}];
+    for (const date of dates) {
+      const day=dayNumber(date), wk=isWeekend(date), diff=day-anchor;
+      const offset=diff+Math.floor(diff/7);
+      const preferred=active.length?((start+offset)%active.length+active.length)%active.length:0;
+      const lock=locks[date], next=[];
+      for (const path of beam) {
+        let candidates;
+        if (lock) candidates=[state.people.find(p=>p.id===lock.personId)||null];
+        else candidates=active.filter(p=>allowedFor(p,date,options)
+          && day-(path.last[p.id]??-Infinity)>rest
+          && !lockedAhead.some(e=>e.personId===p.id&&dayNumber(e.date)>day&&dayNumber(e.date)-day<=rest));
+        if (!candidates.length) candidates=[null];
+        for (const person of candidates) {
+          const id=lock?lock.personId:(person?.id||'');
+          const counts={...path.counts}, weekends={...path.weekends}, last={...path.last};
+          let delta=id?0:1000000;
+          if (id) {
+            const total=counts[id]||0;
+            const weekendTotal=weekends[id]||0;
+            const rank=(active.findIndex(p=>p.id===id)-preferred+active.length)%Math.max(active.length,1);
+            delta+=(2*total+1)*100;
+            if(wk) delta+=(2*weekendTotal+1)*1600+(hist.weekends[id]||0)*40;
+            if(!lock) delta+=rank*(state.settings.mode==='balanced'?0.15:2.5);
+            counts[id]=(counts[id]||0)+1;
+            if(wk) weekends[id]=(weekends[id]||0)+1;
+            last[id]=day;
+          }
+          const previous=old?.entries.find(e=>e.date===date);
+          const entry=lock?{...lock}:{date,personId:id,locked:false,note:previous?.note||''};
+          next.push({score:path.score+delta,counts,weekends,last,entries:path.entries.concat(entry),serial:serial++});
+        }
+      }
+      next.sort((a,b)=>a.score-b.score||a.serial-b.serial);
+      beam=next.slice(0,options.beamWidth||140);
+    }
+    const best=beam[0];
+    const month={key,entries:best.entries,generatedAt:new Date().toISOString(),mode:state.settings.mode};
+    return {month,issues:validateMonth({...state,months:{...state.months,[key]:month}},key)};
+  }
+  // Monthly total quotas and weekend quotas take priority over the rotation preference.
+  function monthlyPlan(state,key,options={}) {
+    const people=state.people.filter(p=>p.active),n=people.length,dates=monthDates(key),length=dates.length;
+    if(!n)return null;
+    const old=state.months[key],locks=plannedLocks(state,key,options),index=new Map(people.map((p,i)=>[p.id,i])),hist=historical(state,key),rest=state.settings.restDays;
+    const days=dates.map(dayNumber),slots=people.map(p=>Number.isFinite(hist.last[p.id])?[hist.last[p.id]]:[]),counts=Array(n).fill(0),weekends=Array(n).fill(0),saturdays=Array(n).fill(0),sundays=Array(n).fill(0),assigned=Array(length);
+    let excluded=0,excludedWeekend=0;
+    dates.forEach((date,i)=>{const lock=locks.get(date);if(!lock)return;assigned[i]=lock.personId;const p=index.get(lock.personId);if(p===undefined){excluded++;if(isWeekend(date))excludedWeekend++;}else{counts[p]++;if(isWeekend(date))weekends[p]++;if(weekday(date)===6)saturdays[p]++;if(weekday(date)===0)sundays[p]++;slots[p].push(days[i]);}});
+    for(const [k,month] of Object.entries(state.months))if(k!==key)for(const entry of month.entries){const p=index.get(entry.personId),day=dayNumber(entry.date);if(p!==undefined&&day>days.at(-1)&&day-days.at(-1)<=rest)slots[p].push(day);}
+    const total=length-excluded,low=Math.floor(total/n),high=Math.ceil(total/n);
+    if(counts.some(c=>c>high))return null;
+    const allowed=dates.map(date=>people.map(p=>allowedFor(p,date,options))),start=Math.max(0,people.findIndex(p=>p.id===state.settings.startPersonId)),anchor=dayNumber(state.settings.anchorDate);
+    const eligible=people.map((_,p)=>weekends[p]>0||dates.some((d,i)=>isWeekend(d)&&allowed[i][p]));
+    const weekendTotal=dates.filter(isWeekend).length-excludedWeekend,eligibleCount=eligible.filter(Boolean).length,wLow=eligibleCount?Math.floor(weekendTotal/eligibleCount):0,wHigh=eligibleCount?Math.ceil(weekendTotal/eligibleCount):0;
+    const satEligible=people.map((_,p)=>saturdays[p]>0||dates.some((d,i)=>weekday(d)===6&&allowed[i][p])),sunEligible=people.map((_,p)=>sundays[p]>0||dates.some((d,i)=>weekday(d)===0&&allowed[i][p]));
+    const satHigh=Math.ceil(dates.filter(d=>weekday(d)===6).length/Math.max(1,satEligible.filter(Boolean).length)),sunHigh=Math.ceil(dates.filter(d=>weekday(d)===0).length/Math.max(1,sunEligible.filter(Boolean).length));
+    const history=people.map(p=>hist.counts[p.id]||0),historyMin=Math.min(...history),historySpan=Math.max(...history)-historyMin+1;
+    const preferred=days.map(day=>{const d=day-anchor;return ((start+d+Math.floor(d/7))%n+n)%n;});
+    const budget=options.balanceNodes||60000;let nodes=0,minimum,maximum,splitWeekends=true;
+    const weekendMinimum=eligible.map(v=>v?wLow:0),weekendMaximum=eligible.map((v,p)=>v?Math.max(wHigh,weekends[p]):0);
+    function search(remaining){
+      if(!remaining)return counts.every((c,p)=>c>=minimum[p]&&c<=maximum[p]&&weekends[p]>=weekendMinimum[p]);
+      if(++nodes>budget)return false;
+      const domains=Array(length),capacity=Array(n).fill(0),weekendCapacity=Array(n).fill(0),last=Array(n).fill(-Infinity),lastWeekend=Array(n).fill(-Infinity);
+      let chosen=-1,forced=-1,remainingWeekend=0;
+      for(let i=0;i<length;i++){
+        if(assigned[i]!==undefined)continue;
+        const wk=isWeekend(dates[i]),sat=weekday(dates[i])===6,sun=weekday(dates[i])===0,list=[];if(wk)remainingWeekend++;
+        for(let p=0;p<n;p++)if(counts[p]<maximum[p]&&allowed[i][p]&&(!wk||weekends[p]<weekendMaximum[p])&&(!splitWeekends||(!sat||saturdays[p]<satHigh)&&(!sun||sundays[p]<sunHigh))&&!slots[p].some(d=>Math.abs(d-days[i])<=rest)){
+          list.push(p);if(days[i]-last[p]>rest){capacity[p]++;last[p]=days[i];}if(wk&&days[i]-lastWeekend[p]>rest){weekendCapacity[p]++;lastWeekend[p]=days[i];}
+        }
+        if(!list.length)return false;
+        domains[i]=list;
+        if(chosen<0||(wk&&!isWeekend(dates[chosen]))||(wk===isWeekend(dates[chosen])&&list.length<domains[chosen].length))chosen=i;
+        if(list.length===1&&forced<0)forced=i;
+      }
+      let available=0,availableWeekend=0;
+      for(let p=0;p<n;p++){
+        if(counts[p]+capacity[p]<minimum[p]||weekends[p]+weekendCapacity[p]<weekendMinimum[p])return false;
+        available+=Math.min(maximum[p]-counts[p],capacity[p]);availableWeekend+=Math.min(weekendMaximum[p]-weekends[p],weekendCapacity[p]);
+      }
+      if(available<remaining||availableWeekend<remainingWeekend)return false;if(forced>=0)chosen=forced;
+      const wk=isWeekend(dates[chosen]),sat=weekday(dates[chosen])===6,sun=weekday(dates[chosen])===0;
+      const score=p=>((p-preferred[chosen]+n)%n)*(state.settings.mode==='balanced'?.2:4)+counts[p]*.6+(history[p]-historyMin)/historySpan*.5+(wk?weekends[p]*40+(hist.weekends[people[p].id]||0)*24+(sat?saturdays[p]:sundays[p])*12:0)-Math.max(0,minimum[p]-counts[p])/Math.max(1,capacity[p])*2;
+      domains[chosen].sort((a,b)=>score(a)-score(b)||a-b);
+      for(const p of domains[chosen]){
+        assigned[chosen]=people[p].id;counts[p]++;if(wk)weekends[p]++;if(sat)saturdays[p]++;if(sun)sundays[p]++;slots[p].push(days[chosen]);
+        if(search(remaining-1))return true;
+        slots[p].pop();if(sun)sundays[p]--;if(sat)saturdays[p]--;if(wk)weekends[p]--;counts[p]--;assigned[chosen]=undefined;
+        if(nodes>budget)return false;
+      }
+      return false;
+    }
+    const free=length-locks.size,desired=Array(n).fill(low),extra=total%n;let remainingExtra=extra;
+    for(let p=0;p<n;p++)if(counts[p]>low){desired[p]=high;remainingExtra--;}
+    const cycle=((Number(key.slice(0,4))*12+Number(key.slice(5))-1)%n+n)%n;
+    const extraOrder=people.map((_,p)=>p).filter(p=>desired[p]===low&&counts[p]+dates.filter((_,i)=>assigned[i]===undefined&&allowed[i][p]).length>=high).sort((a,b)=>history[a]-history[b]||((a-cycle+n)%n)-((b-cycle+n)%n));
+    for(const p of extraOrder)if(remainingExtra>0){desired[p]=high;remainingExtra--;}
+    let found=false;
+    for(const split of [true,false]){
+      splitWeekends=split;
+      if(remainingExtra===0){nodes=0;minimum=desired.slice();maximum=desired.slice();found=search(free);}
+      if(!found&&high>low){nodes=0;minimum=Array(n).fill(low);maximum=Array(n).fill(high);found=search(free);}
+      if(found)break;
+    }
+    if(!found)return null;
+    return {key,entries:dates.map((date,i)=>locks.has(date)?{...locks.get(date)}:{date,personId:assigned[i],locked:false,note:old?.entries.find(e=>e.date===date)?.note||''}),generatedAt:new Date().toISOString(),mode:state.settings.mode};
+  }
+  function generate(state,key,options={}) {
+    const plan=planningState(state,key);options={...options,fixed:fixedSchedule(plan,key)};const month=monthlyPlan(plan,key,options)||beamGenerate(plan,key,options).month;
+    month.baseEntries=copyBase(month.entries);month.baseSource='generated';
+    return {month,issues:options.fixed.issues.concat(validateMonth({...plan,months:{...plan.months,[key]:month}},key)),fixedMoves:options.fixed.moves};
+  }
+  function validateMonth(state,key) {
+    const month=state.months[key]; if(!month) return [];
+    const issues=[], people=Object.fromEntries(state.people.map(p=>[p.id,p]));
+    const rest=state.settings.restDays;
+    const neighbors=Object.values(state.months).flatMap(m=>m.entries).filter(e=>e.personId).sort((a,b)=>a.date.localeCompare(b.date));
+    for(const e of month.entries) {
+      if(!e.personId) {issues.push({date:e.date,type:'empty',message:'Chưa tìm được người phù hợp'});continue;}
+      const reason=personProblem(people[e.personId],e.date);
+      if(reason) issues.push({date:e.date,type:'rule',message:reason+(e.locked?' (ca đã khóa)':'')});
+      const near=neighbors.find(other=>other.date!==e.date&&other.personId===e.personId&&Math.abs(dayNumber(e.date)-dayNumber(other.date))<=rest);
+      if(near) issues.push({date:e.date,type:'rest',message:'Chưa đủ '+rest+' ngày nghỉ giữa hai ca (gần '+near.date.split('-').reverse().join('/')+')'});
+    }
+    const cap=weekendLimit(state,key).limit;
+    if(cap)for(const p of state.people){const duties=month.entries.filter(e=>e.personId===p.id&&isWeekend(e.date));if(duties.length>cap)issues.push({date:duties.at(-1).date,type:'weekend',message:p.name+' có '+duties.length+' ca T7/CN, vượt mục tiêu '+cap+' ca. Kiểm tra ca khóa và điều kiện nghỉ.'});}
+    return issues;
+  }
+  function stats(state,key) {
+    const entries=state.months[key]?.entries||[];
+    return state.people.filter(p=>p.active||entries.some(e=>e.personId===p.id)).map(p=> {
+      const list=entries.filter(e=>e.personId===p.id);
+      return {...p,total:list.length,weekend:list.filter(e=>isWeekend(e.date)).length,saturday:list.filter(e=>weekday(e.date)===6).length,sunday:list.filter(e=>weekday(e.date)===0).length,weekday:list.filter(e=>!isWeekend(e.date)).length,locked:list.filter(e=>e.locked).length};
+    });
+  }
+  function validateImport(raw) {
+    if(!raw||raw.schema!==1||!Array.isArray(raw.people)||raw.people.length<1||raw.people.length>80) throw new Error('Tệp không đúng định dạng sao lưu Lịch Trực (phiên bản 1).');
+    const dateValid=s=>Number.isFinite(dayNumber(s));
+    const ids=new Set();
+    const people=raw.people.map((p,i)=> {
+      if(!p||typeof p.id!=='string'||!/^[A-Za-z0-9_-]{1,80}$/.test(p.id)||['__proto__','constructor','prototype'].includes(p.id)||ids.has(p.id)||typeof p.name!=='string'||!p.name.trim()||p.name.length>80) throw new Error('Danh sách nhân sự không hợp lệ.');
+      ids.add(p.id);
+      let fixed=p.fixedMonthDays;
+      if(fixed===undefined)fixed=p.id==='dung'&&Array.isArray(p.blockedWeekdays)&&p.blockedWeekdays.includes(0)&&p.blockedWeekdays.includes(6)?[5,11,17,23]:[];
+      if(!Array.isArray(fixed)||fixed.length>31||fixed.some(d=>!Number.isInteger(d)||d<1||d>31))throw new Error('Ngày trực cố định cần là các số từ 1 đến 31.');
+      return {id:p.id,name:p.name.trim(),active:p.active!==false,color:/^#[a-f\d]{6}$/i.test(p.color)?p.color:defaults[i%7][2],
+        blockedWeekdays:[...new Set((Array.isArray(p.blockedWeekdays)?p.blockedWeekdays:[]).filter(n=>Number.isInteger(n)&&n>=0&&n<=6))],
+        offDates:[...new Set((Array.isArray(p.offDates)?p.offDates:[]).filter(dateValid))].slice(0,2000),fixedMonthDays:[...new Set(fixed)].sort((a,b)=>a-b)};
+    });
+    const s=raw.settings||{}, anchorDate=dateValid(s.anchorDate)?s.anchorDate:new Date().toISOString().slice(0,10);
+    const settings={mode:s.mode==='balanced'?'balanced':'progressive',restDays:Number.isInteger(s.restDays)?Math.max(0,Math.min(14,s.restDays)):1,
+      anchorDate,startPersonId:ids.has(s.startPersonId)?s.startPersonId:people[0].id};
+    const months={};
+    const source=raw.months&&typeof raw.months==='object'?raw.months:{};
+    if(Object.keys(source).length>600) throw new Error('Tệp chứa quá nhiều tháng (tối đa 600 tháng).');
+    for(const [key,value] of Object.entries(source)) {
+      if(!/^(19|20|21)\d\d-(0[1-9]|1[0-2])$/.test(key)||!value||!Array.isArray(value.entries)) throw new Error('Dữ liệu tháng không hợp lệ.');
+      const expected=monthDates(key), seen=new Set();
+      if(value.entries.length!==expected.length) throw new Error('Lịch '+key+' thiếu hoặc thừa ngày.');
+      const entries=value.entries.map(e=> {
+        if(!e||!expected.includes(e.date)||seen.has(e.date)||typeof e.personId!=='string'||(e.personId&&!ids.has(e.personId))) throw new Error('Ngày hoặc nhân sự trong lịch '+key+' không hợp lệ.');
+        seen.add(e.date);
+        return {date:e.date,personId:e.personId,locked:e.locked===true,note:typeof e.note==='string'?e.note.slice(0,500):''};
+      }).sort((a,b)=>a.date.localeCompare(b.date));
+      months[key]={key,entries,generatedAt:typeof value.generatedAt==='string'?value.generatedAt:'',mode:value.mode==='balanced'?'balanced':'progressive'};
+      if(Object.prototype.hasOwnProperty.call(value,'baseEntries')){
+        const baseSeen=new Set();
+        if(!Array.isArray(value.baseEntries)||value.baseEntries.length!==expected.length)throw new Error('Lịch gốc '+key+' thiếu hoặc thừa ngày.');
+        months[key].baseEntries=value.baseEntries.map(e=>{
+          if(!e||!expected.includes(e.date)||baseSeen.has(e.date)||typeof e.personId!=='string'||(e.personId&&!ids.has(e.personId)))throw new Error('Ngày hoặc nhân sự trong lịch gốc '+key+' không hợp lệ.');
+          baseSeen.add(e.date);return {date:e.date,personId:e.personId};
+        }).sort((a,b)=>a.date.localeCompare(b.date));
+        months[key].baseSource=['generated','manual','existing'].includes(value.baseSource)?value.baseSource:'existing';
+      }else{
+        months[key].baseEntries=copyBase(entries);months[key].baseSource='existing';
+      }
+    }
+    const viewMonth=/^(19|20|21)\d\d-(0[1-9]|1[0-2])$/.test(raw.viewMonth)?raw.viewMonth:anchorDate.slice(0,7);
+    return {schema:1,teamName:typeof raw.teamName==='string'?raw.teamName.slice(0,120):'Phòng CNTT',viewMonth,people,settings,months};
+  }
+  const api={dayNumber,daysInMonth,monthDates,weekday,isWeekend,adjacentMonth,createState,generate,validateMonth,stats,validateImport,personProblem,baseEntries,editDuty,fixedSchedule,weekendLimit};
+  root.RotaCore=api;
+  if(typeof module!=='undefined') module.exports=api;
+})(globalThis);
+</script>
+<script>(function (root) {
+  'use strict';
+
+  const CONFIG_STORE = 'lich-truc-gs-config-v25';
+  const SESSION_STORE = 'lich-truc-gs-session-v25';
+  const LOCAL_DB_STORE = 'lich-truc-gs-localdb-v25';
+  const CLIENT_KEY_STORE = 'lich-truc-gs-client-v25';
+
+  const memStore = {};
+  function readStorage(key) {
+    try {
+      const v = localStorage.getItem(key);
+      if (v !== null && v !== undefined) return v;
+    } catch {}
+    return Object.prototype.hasOwnProperty.call(memStore, key) ? memStore[key] : null;
+  }
+  function writeStorage(key, value) {
+    if (value === null || value === undefined) delete memStore[key];
+    else memStore[key] = String(value);
+    try {
+      if (value === null || value === undefined) localStorage.removeItem(key);
+      else localStorage.setItem(key, String(value));
+      return true;
+    } catch { return true; }
+  }
+
+  function randomHex(bytes) {
+    const chars = '0123456789abcdef';
+    let out = '';
+    for (let i = 0; i < bytes * 2; i++) out += chars[Math.floor(Math.random() * 16)];
+    return out;
+  }
+
+  function clientKey() {
+    let k = readStorage(CLIENT_KEY_STORE);
+    if (!k) {
+      k = randomHex(16);
+      writeStorage(CLIENT_KEY_STORE, k);
+    }
+    return k;
+  }
+
+  // Simple synchronous SHA-256 / hash helper for local DB mode
+  function simpleHashHex(str) {
+    let h1 = 0xdeadbeef ^ str.length, h2 = 0x41c6ce57 ^ str.length;
+    let h3 = 0x9e3779b9 ^ str.length, h4 = 0x85ebca6b ^ str.length;
+    for (let i = 0; i < str.length; i++) {
+      const ch = str.charCodeAt(i);
+      h1 = Math.imul(h1 ^ ch, 2654435761);
+      h2 = Math.imul(h2 ^ ch, 1597334677);
+      h3 = Math.imul(h3 ^ ch, 2246822507);
+      h4 = Math.imul(h4 ^ ch, 3266489909);
+    }
+    h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507) ^ Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+    h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507) ^ Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+    h3 = Math.imul(h3 ^ (h3 >>> 16), 2246822507) ^ Math.imul(h4 ^ (h4 >>> 13), 3266489909);
+    h4 = Math.imul(h4 ^ (h4 >>> 16), 2246822507) ^ Math.imul(h3 ^ (h3 >>> 13), 3266489909);
+    const hex = n => (n >>> 0).toString(16).padStart(8, '0');
+    return hex(h1) + hex(h2) + hex(h3) + hex(h4) + hex(h1 ^ h3) + hex(h2 ^ h4) + hex(h1 ^ h4) + hex(h2 ^ h3);
+  }
+
+  function makeAppError(message, status = 400) {
+    const err = new Error(message);
+    err.status = status;
+    return err;
+  }
+
+  function getStoredConfig() {
+    try {
+      if (typeof location !== 'undefined' && location.search) {
+        const params = new URLSearchParams(location.search);
+        const apiParam = params.get('api') || params.get('scriptUrl');
+        if (apiParam && /^https:\/\/script\.google\.com\/macros\/s\//i.test(apiParam.trim())) {
+          const saved = { hosting: 'googlesheets', scriptUrl: apiParam.trim(), sheetName: 'Google Sheets' };
+          writeStorage(CONFIG_STORE, JSON.stringify(saved));
+        }
+      }
+    } catch {}
+    const fileUrl = (root.ROTA_CONFIG && typeof root.ROTA_CONFIG.scriptUrl === 'string') ? root.ROTA_CONFIG.scriptUrl.trim() : '';
+    if (fileUrl) {
+      return { hosting: 'googlesheets', scriptUrl: fileUrl, sheetName: root.ROTA_CONFIG.sheetName || 'Google Sheets', fromConfigFile: true };
+    }
+    try {
+      const raw = readStorage(CONFIG_STORE);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed && typeof parsed === 'object') return parsed;
+      }
+    } catch {}
+    return null;
+  }
+
+  function saveStoredConfig(cfg) {
+    writeStorage(CONFIG_STORE, JSON.stringify(cfg));
+  }
+
+  function getSession() {
+    try {
+      const raw = readStorage(SESSION_STORE);
+      return raw ? JSON.parse(raw) : null;
+    } catch { return null; }
+  }
+
+  function setSession(session) {
+    if (!session) writeStorage(SESSION_STORE, null);
+    else writeStorage(SESSION_STORE, JSON.stringify(session));
+  }
+
+  // =========================================================================
+  // Built-in Google Sheets Table Emulator (for Local / Demo / Canvas mode)
+  // =========================================================================
+  function currentVnMonth() {
+    try {
+      const parts = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ho_Chi_Minh', year: 'numeric', month: '2-digit' }).formatToParts(new Date());
+      const y = parts.find(p => p.type === 'year')?.value;
+      const m = parts.find(p => p.type === 'month')?.value;
+      if (y && m) return `${y}-${m}`;
+    } catch {}
+    return new Date().toISOString().slice(0, 7);
+  }
+
+  function defaultStateObj() {
+    const month = currentVnMonth();
+    const names = [
+      ['quang', 'QUANG', '#18794E'],
+      ['dung-em', 'DŨNG EM', '#B45309'],
+      ['lam', 'LÂM', '#4F46C8'],
+      ['luc', 'LỰC', '#BE3F65'],
+      ['dung', 'DŨNG', '#176D9C'],
+      ['thuc', 'THỨC', '#80620E'],
+      ['linh', 'LINH', '#7C3FBD']
+    ];
+    return {
+      schema: 1,
+      teamName: 'Phòng CNTT',
+      viewMonth: month,
+      people: names.map(([id, name, color]) => ({
+        id,
+        name,
+        color,
+        active: true,
+        blockedWeekdays: id === 'dung' ? [0, 6] : [],
+        offDates: [],
+        fixedMonthDays: id === 'dung' ? [5, 11, 17, 23] : []
+      })),
+      settings: {
+        mode: 'progressive',
+        restDays: 1,
+        anchorDate: month + '-01',
+        startPersonId: 'quang'
+      },
+      months: {}
+    };
+  }
+
+  function defaultThemeObj() {
+    return { primary: '#28764A', background: '#F0F8E9', sidebar: '#E9F4E1' };
+  }
+
+  function loadLocalDb() {
+    try {
+      const raw = readStorage(LOCAL_DB_STORE);
+      if (raw) {
+        const db = JSON.parse(raw);
+        if (db && typeof db === 'object' && db.lt_meta) return db;
+      }
+    } catch {}
+    return {
+      lt_meta: null,
+      lt_users: [],
+      lt_sessions: [],
+      lt_backups: [],
+      lt_login_attempts: [],
+      lt_audit_log: [],
+      lt_theme: { id: 1, revision: 0, primary_color: '#28764A', background_color: '#F0F8E9', sidebar_color: '#E9F4E1' }
+    };
+  }
+
+  function saveLocalDb(db) {
+    writeStorage(LOCAL_DB_STORE, JSON.stringify(db));
+  }
+
+  function hashPasswordLocal(password) {
+    const ulen = Array.from(String(password ?? '')).length;
+    if (typeof password !== 'string' || password.length > 512 || ulen < 10 || ulen > 128 || password.includes('\0')) {
+      throw makeAppError('Mật khẩu cần từ 10 đến 128 ký tự.', 400);
+    }
+    const salt = randomHex(16);
+    const digest = simpleHashHex(salt + ':' + password);
+    return `local-sha256$1$${salt}$${digest}`;
+  }
+
+  function verifyPasswordLocal(password, stored) {
+    if (typeof password !== 'string' || typeof stored !== 'string' || password.length > 512 || password.includes('\0')) return false;
+    const parts = stored.split('$');
+    if (parts.length !== 4 || parts[0] !== 'local-sha256') return false;
+    const salt = parts[2], target = parts[3];
+    return simpleHashHex(salt + ':' + password) === target;
+  }
+
+  function validateUserInputLocal(username, display) {
+    const uname = typeof username === 'string' ? username.trim().toLowerCase() : '';
+    if (!/^[a-z0-9][a-z0-9_.-]{2,31}$/.test(uname)) {
+      throw makeAppError('Tên đăng nhập cần 3–32 ký tự: chữ không dấu, số, dấu chấm, gạch ngang, gạch dưới.', 400);
+    }
+    const ulen = typeof display === 'string' ? Array.from(display.trim()).length : 0;
+    if (typeof display !== 'string' || !display.trim() || ulen > 80) {
+      throw makeAppError('Tên hiển thị cần từ 1 đến 80 ký tự.', 400);
+    }
+    return [uname, display.trim()];
+  }
+
+  function ensureCanvasDefaultSeeded(forceSeed = false) {
+    if (!root.ROTA_CANVAS_PREVIEW && !forceSeed) return;
+    let db = loadLocalDb();
+    if (!db.lt_meta || !db.lt_meta.installed) {
+      const state = defaultStateObj();
+      if (root.RotaCore && typeof root.RotaCore.generate === 'function') {
+        const gen = root.RotaCore.generate(state, state.viewMonth);
+        state.months[state.viewMonth] = gen.month;
+      }
+      const now = Math.floor(Date.now() / 1000);
+      const hash = hashPasswordLocal('matkhau12345');
+      db.lt_users = [{
+        id: 1,
+        username: 'quantri',
+        display_name: 'Quản trị viên',
+        password_hash: hash,
+        active: 1,
+        created_at: now
+      }];
+      const pubKeys = Object.keys(state.months);
+      const pubState = buildPublishStateLocal(state, pubKeys);
+      db.lt_meta = {
+        id: 1,
+        installed: 1,
+        instance_id: randomHex(16),
+        team_name: state.teamName,
+        view_month: state.viewMonth,
+        settings_json: JSON.stringify(state.settings),
+        draft_revision: 1,
+        reset_generation: 0,
+        public_revision: 1,
+        public_months: JSON.stringify(pubKeys),
+        public_state: JSON.stringify(pubState),
+        published_at: new Date().toISOString(),
+        last_reset_backup: null,
+        dummy_hash: hash,
+        draft_state_json: JSON.stringify(state)
+      };
+      db.lt_audit_log = [{
+        id: 1,
+        created_at: now,
+        actor_username: 'quantri',
+        actor_display_name: 'Quản trị viên',
+        event_name: 'installed',
+        target: 'Website',
+        details: 'Tạo website và quản trị viên đầu tiên.'
+      }];
+      const sessionVal = randomHex(32);
+      const csrfVal = randomHex(32);
+      db.lt_sessions = [{
+        id_hash: simpleHashHex(sessionVal),
+        user_id: 1,
+        csrf_token: csrfVal,
+        created_at: now,
+        last_activity: now,
+        expires_at: now + 28800
+      }];
+      saveLocalDb(db);
+      saveStoredConfig({ hosting: 'local', scriptUrl: '', sheetName: 'Bộ nhớ trình duyệt (Google Sheets Emulator)' });
+      setSession({
+        sessionToken: sessionVal,
+        csrfToken: csrfVal,
+        user: { username: 'quantri', displayName: 'Quản trị viên', active: true }
+      });
+    } else if (!getSession() && db.lt_users.length > 0) {
+      const now = Math.floor(Date.now() / 1000);
+      const u = db.lt_users[0];
+      const sessionVal = randomHex(32);
+      const csrfVal = randomHex(32);
+      db.lt_sessions.push({
+        id_hash: simpleHashHex(sessionVal),
+        user_id: u.id,
+        csrf_token: csrfVal,
+        created_at: now,
+        last_activity: now,
+        expires_at: now + 28800
+      });
+      saveLocalDb(db);
+      setSession({
+        sessionToken: sessionVal,
+        csrfToken: csrfVal,
+        user: { username: u.username, displayName: u.display_name, active: true }
+      });
+    }
+  }
+
+  function buildPublishStateLocal(state, keys) {
+    const all = state.months || {};
+    const months = {};
+    const used = {};
+    keys.forEach(k => {
+      if (!all[k]) return;
+      const copy = JSON.parse(JSON.stringify(all[k]));
+      delete copy.baseEntries;
+      delete copy.baseSource;
+      months[k] = copy;
+      all[k].entries.forEach(e => { if (e.personId) used[e.personId] = true; });
+    });
+    let p = state.people.filter(person => person.active || used[person.id]).map(person => ({
+      id: person.id,
+      name: person.name,
+      color: person.color,
+      active: person.active,
+      blockedWeekdays: [],
+      offDates: [],
+      fixedMonthDays: []
+    }));
+    if (!p.length && state.people.length) {
+      const f = state.people[0];
+      p = [{ id: f.id, name: f.name, color: f.color, active: f.active, blockedWeekdays: [], offDates: [], fixedMonthDays: [] }];
+    }
+    return {
+      schema: 1,
+      teamName: state.teamName,
+      viewMonth: keys.includes(state.viewMonth) ? state.viewMonth : (keys[0] || state.viewMonth),
+      people: p,
+      months,
+      settings: {
+        mode: 'progressive',
+        restDays: 0,
+        anchorDate: (keys[0] || state.viewMonth) + '-01',
+        startPersonId: p[0]?.id || 'quang'
+      }
+    };
+  }
+
+  function normalizeStateLocal(raw) {
+    if (root.RotaCore && typeof root.RotaCore.validateImport === 'function') {
+      return root.RotaCore.validateImport(raw);
+    }
+    return raw;
+  }
+
+  function preserveBasesLocal(state, before, body) {
+    const requested = body.regeneratedMonths || [];
+    if (!Array.isArray(requested) || requested.length > 600) {
+      throw makeAppError('Danh sách tháng tạo lại không hợp lệ.', 400);
+    }
+    const months = state.months || {};
+    const old = (before && before.months) ? before.months : {};
+    for (const key of requested) {
+      if (typeof key !== 'string' || !months[key] || months[key].baseSource !== 'generated') {
+        throw makeAppError('Tháng tạo lại cần có lịch gốc tự động hợp lệ.', 400);
+      }
+    }
+    if (body.changeKind === 'restore') return state;
+    for (const key of Object.keys(months)) {
+      if (!old[key] || requested.includes(key)) continue;
+      const base = JSON.parse(JSON.stringify(old[key].baseEntries));
+      if (old[key].baseSource === 'manual') {
+        base.forEach((e, i) => {
+          if (e.personId === '' && old[key].entries[i]?.personId === '') {
+            e.personId = months[key].entries[i].personId;
+          }
+        });
+      }
+      months[key].baseEntries = base;
+      months[key].baseSource = old[key].baseSource;
+    }
+    return state;
+  }
+
+  function preserveFixedRulesLocal(state, before, body) {
+    if (body.changeKind === 'restore') return state;
+    const provided = {};
+    (body.state?.people || []).forEach(p => {
+      if (p && p.id) provided[p.id] = Object.prototype.hasOwnProperty.call(p, 'fixedMonthDays');
+    });
+    const old = {};
+    (before?.people || []).forEach(p => { old[p.id] = p.fixedMonthDays; });
+    state.people.forEach(p => {
+      if (!provided[p.id] && old[p.id] !== undefined) p.fixedMonthDays = old[p.id];
+    });
+    return state;
+  }
+
+  function auditRecordLocal(db, actor, event, target, details) {
+    const nextId = db.lt_audit_log.length ? Math.max(...db.lt_audit_log.map(r => Number(r.id) || 0)) + 1 : 1;
+    db.lt_audit_log.push({
+      id: nextId,
+      created_at: Math.floor(Date.now() / 1000),
+      actor_username: actor.username,
+      actor_display_name: actor.display_name || actor.displayName || actor.username,
+      event_name: event,
+      target: String(target || '').slice(0, 120),
+      details: String(details || '').slice(0, 500)
+    });
+  }
+
+  function auditDraftLocal(db, actor, before, after, restore) {
+    const oldM = before?.months || {};
+    const newM = after?.months || {};
+    const added = [];
+    const changed = [];
+    const removed = Object.keys(oldM).filter(k => !newM[k]);
+    const bases = [];
+    for (const k of Object.keys(newM)) {
+      if (!oldM[k]) added.push(k);
+      else if (JSON.stringify(oldM[k]) !== JSON.stringify(newM[k])) changed.push(k);
+      if (oldM[k] && JSON.stringify(oldM[k].baseEntries || null) !== JSON.stringify(newM[k].baseEntries || null)) {
+        bases.push(k);
+      }
+    }
+    const notes = [];
+    if (added.length) notes.push('Tạo ' + added.length + ' tháng: ' + added.slice(0, 12).join(', '));
+    if (changed.length) notes.push('Sửa ' + changed.length + ' tháng: ' + changed.slice(0, 12).join(', '));
+    if (removed.length) notes.push('Bỏ ' + removed.length + ' tháng: ' + removed.slice(0, 12).join(', '));
+    if (bases.length) notes.push('Cập nhật lịch gốc ' + bases.length + ' tháng: ' + bases.slice(0, 12).join(', '));
+    if (JSON.stringify(before.people) !== JSON.stringify(after.people)) notes.push('Cập nhật nhân sự, màu sắc, ngày nghỉ hoặc ngày trực cố định');
+    if (JSON.stringify(before.settings) !== JSON.stringify(after.settings)) notes.push('Cập nhật quy tắc xếp lịch');
+    if (before.teamName !== after.teamName) notes.push('Đổi tên đơn vị');
+    if (!notes.length && !restore) return;
+    const event = restore ? 'restore' : (added.length && !changed.length && !removed.length ? 'schedule_create' : 'draft_update');
+    if (restore) notes.unshift('Khôi phục bản soạn từ JSON');
+    auditRecordLocal(db, actor, event, 'Lịch trực', notes.join('. ') + '.');
+  }
+
+  function readThemeLocal(db) {
+    const t = db.lt_theme || { revision: 0, primary_color: '#28764A', background_color: '#F0F8E9', sidebar_color: '#E9F4E1' };
+    return {
+      revision: Number(t.revision || 0),
+      theme: {
+        primary: String(t.primary_color || '#28764A').toUpperCase(),
+        background: String(t.background_color || '#F0F8E9').toUpperCase(),
+        sidebar: String(t.sidebar_color || '#E9F4E1').toUpperCase()
+      }
+    };
+  }
+
+  function privateSnapshotLocal(db, stateOpt) {
+    const m = db.lt_meta;
+    const state = stateOpt || JSON.parse(m.draft_state_json);
+    return {
+      instanceId: m.instance_id,
+      draftRevision: Number(m.draft_revision || 0),
+      resetGeneration: Number(m.reset_generation || 0),
+      revision: Number(m.public_revision || 0),
+      updatedAt: m.published_at || null,
+      months: JSON.parse(m.public_months || '[]'),
+      lastResetBackup: m.last_reset_backup || null,
+      state
+    };
+  }
+
+  function publicSnapshotLocal(db) {
+    const m = db.lt_meta;
+    return {
+      revision: Number(m?.public_revision || 0),
+      updatedAt: m?.published_at || null,
+      months: JSON.parse(m?.public_months || '[]'),
+      state: m?.public_state ? JSON.parse(m.public_state) : null,
+      appearance: readThemeLocal(db)
+    };
+  }
+
+  function getLocalActor(db, sessionToken, csrfToken, requireCsrf) {
+    if (!sessionToken || typeof sessionToken !== 'string') return null;
+    const idHash = simpleHashHex(sessionToken);
+    const now = Math.floor(Date.now() / 1000);
+    const s = db.lt_sessions.find(x => x.id_hash === idHash);
+    if (!s) return null;
+    const u = db.lt_users.find(x => Number(x.id) === Number(s.user_id));
+    if (!u || !u.active || Number(s.expires_at) <= now || Number(s.last_activity) <= now - 1800) {
+      db.lt_sessions = db.lt_sessions.filter(x => x.id_hash !== idHash);
+      saveLocalDb(db);
+      return null;
+    }
+    if (requireCsrf && csrfToken && s.csrf_token !== csrfToken) return null;
+    s.last_activity = now;
+    saveLocalDb(db);
+    return {
+      id_hash: s.id_hash,
+      user_id: Number(u.id),
+      csrf_token: s.csrf_token,
+      username: u.username,
+      display_name: u.display_name,
+      active: Boolean(u.active),
+      password_hash: u.password_hash
+    };
+  }
+
+  function handleLocalRequest(action, method, body, sessionToken, csrfToken) {
+    const db = loadLocalDb();
+    const isInstalled = Boolean(db.lt_meta && Number(db.lt_meta.installed) === 1);
+
+    if (action === 'setup_status') {
+      return {
+        ok: true,
+        locked: isInstalled,
+        installed: isInstalled,
+        database: 'Bộ nhớ trình duyệt (Local Sheets DB)',
+        host: 'GitHub Pages / Trình duyệt',
+        appearance: readThemeLocal(db)
+      };
+    }
+
+    if (action === 'check' || action === 'setup_check') {
+      if (isInstalled) {
+        throw makeAppError('Database này đã cài Lịch Trực hoặc có tài khoản. Không cài lại để tránh thay dữ liệu đang có. Mở trang quản trị để đăng nhập.', 409);
+      }
+      return {
+        ok: true,
+        database: 'Bộ nhớ trình duyệt (Local Sheets DB)',
+        host: 'GitHub Pages / Trình duyệt'
+      };
+    }
+
+    if (action === 'finish' || action === 'setup_finish') {
+      if (isInstalled) {
+        throw makeAppError('Website đã cài đặt. Trình cài đặt đã được khóa.', 409);
+      }
+      const [uname, dname] = validateUserInputLocal(body.username, body.displayName);
+      if (typeof body.password !== 'string' || typeof body.confirmPassword !== 'string' || body.password !== body.confirmPassword) {
+        throw makeAppError('Hai mật khẩu quản trị chưa khớp.', 400);
+      }
+      const hash = hashPasswordLocal(body.password);
+      const state = defaultStateObj();
+      const now = Math.floor(Date.now() / 1000);
+      db.lt_users = [{ id: 1, username: uname, display_name: dname, password_hash: hash, active: 1, created_at: now }];
+      db.lt_meta = {
+        id: 1,
+        installed: 1,
+        instance_id: randomHex(16),
+        team_name: state.teamName,
+        view_month: state.viewMonth,
+        settings_json: JSON.stringify(state.settings),
+        draft_revision: 0,
+        reset_generation: 0,
+        public_revision: 0,
+        public_months: '[]',
+        public_state: '',
+        published_at: '',
+        last_reset_backup: '',
+        dummy_hash: hash,
+        draft_state_json: JSON.stringify(state)
+      };
+      const sVal = randomHex(32), cVal = randomHex(32);
+      db.lt_sessions = [{
+        id_hash: simpleHashHex(sVal),
+        user_id: 1,
+        csrf_token: cVal,
+        created_at: now,
+        last_activity: now,
+        expires_at: now + 28800
+      }];
+      auditRecordLocal(db, { username: uname, display_name: dname }, 'installed', 'Website', 'Tạo website và quản trị viên đầu tiên.');
+      saveLocalDb(db);
+      return {
+        ok: true,
+        sessionToken: sVal,
+        csrfToken: cVal,
+        user: { username: uname, displayName: dname, active: true }
+      };
+    }
+
+    if (!isInstalled) {
+      throw makeAppError('Website chưa cài đặt. Người quản lý mở install.html để thiết lập.', 503);
+    }
+
+    if (method === 'POST') {
+      if (action === 'auth_login') {
+        const uname = typeof body.username === 'string' ? body.username.trim().toLowerCase() : '';
+        const u = db.lt_users.find(x => x.username === uname);
+        if (!u || !u.active || !verifyPasswordLocal(body.password, u.password_hash)) {
+          throw makeAppError('Tên đăng nhập hoặc mật khẩu chưa đúng.', 400);
+        }
+        const now = Math.floor(Date.now() / 1000);
+        const sVal = randomHex(32), cVal = randomHex(32);
+        db.lt_sessions.push({
+          id_hash: simpleHashHex(sVal),
+          user_id: u.id,
+          csrf_token: cVal,
+          created_at: now,
+          last_activity: now,
+          expires_at: now + 28800
+        });
+        auditRecordLocal(db, u, 'login', u.username, 'Đăng nhập trang quản trị.');
+        saveLocalDb(db);
+        return {
+          user: { username: u.username, displayName: u.display_name, active: Boolean(u.active) },
+          sessionToken: sVal,
+          csrfToken: cVal,
+          appearance: readThemeLocal(db)
+        };
+      }
+
+      const actor = getLocalActor(db, sessionToken, csrfToken, true);
+      if (!actor) throw makeAppError('Bạn cần đăng nhập quản trị hoặc phiên đã hết hạn. Tải lại trang quản trị để đăng nhập.', 401);
+
+      if (action === 'admin_theme') {
+        const t = body.theme;
+        if (!t || typeof t !== 'object') throw makeAppError('Chọn đủ ba màu giao diện.', 400);
+        const curRev = Number(db.lt_theme?.revision || 0);
+        if (Number(body.expectedRevision) !== curRev) {
+          throw makeAppError('Màu giao diện đã được đổi ở cửa sổ khác. Bấm Tải màu đã lưu trước khi sửa tiếp.', 409);
+        }
+        const nextRev = curRev + 1;
+        db.lt_theme = {
+          id: 1,
+          revision: nextRev,
+          primary_color: String(t.primary).toUpperCase(),
+          background_color: String(t.background).toUpperCase(),
+          sidebar_color: String(t.sidebar).toUpperCase()
+        };
+        auditRecordLocal(db, actor, 'appearance', 'Giao diện', `Đổi màu chính ${db.lt_theme.primary_color}, nền ${db.lt_theme.background_color}, thanh bên ${db.lt_theme.sidebar_color}.`);
+        saveLocalDb(db);
+        return readThemeLocal(db);
+      }
+
+      if (action === 'auth_logout') {
+        db.lt_sessions = db.lt_sessions.filter(s => s.id_hash !== actor.id_hash);
+        auditRecordLocal(db, actor, 'logout', actor.username, 'Đăng xuất trang quản trị.');
+        saveLocalDb(db);
+        return { ok: true };
+      }
+
+      const accountActions = ['admin_accounts_add', 'admin_accounts_edit', 'admin_accounts_delete', 'admin_accounts_active'];
+      if (['auth_password', 'admin_reset', ...accountActions].includes(action)) {
+        const uRow = db.lt_users.find(x => Number(x.id) === Number(actor.user_id));
+        if (!uRow || !uRow.active || !verifyPasswordLocal(body.currentPassword, uRow.password_hash)) {
+          throw makeAppError('Mật khẩu quản trị hiện tại chưa đúng.', 400);
+        }
+      }
+
+      if (action === 'auth_password') {
+        const newHash = hashPasswordLocal(body.password);
+        const uRow = db.lt_users.find(x => Number(x.id) === Number(actor.user_id));
+        uRow.password_hash = newHash;
+        const now = Math.floor(Date.now() / 1000);
+        const sVal = randomHex(32), cVal = randomHex(32);
+        db.lt_sessions = [{
+          id_hash: simpleHashHex(sVal),
+          user_id: actor.user_id,
+          csrf_token: cVal,
+          created_at: now,
+          last_activity: now,
+          expires_at: now + 28800
+        }];
+        auditRecordLocal(db, actor, 'password_change', actor.username, 'Đổi mật khẩu và kết thúc các phiên đăng nhập khác.');
+        saveLocalDb(db);
+        setSession({
+          sessionToken: sVal,
+          csrfToken: cVal,
+          user: { username: uRow.username, displayName: uRow.display_name, active: true }
+        });
+        return { ok: true, sessionToken: sVal, csrfToken: cVal };
+      }
+
+      if (accountActions.includes(action)) {
+        if (action === 'admin_accounts_add') {
+          const [uname, dname] = validateUserInputLocal(body.username, body.displayName);
+          const hash = hashPasswordLocal(body.password);
+          if (db.lt_users.some(u => u.username === uname)) throw makeAppError('Tên đăng nhập đã tồn tại.', 400);
+          if (db.lt_users.length >= 40) throw makeAppError('Tối đa 40 tài khoản quản trị.', 400);
+          const nextId = Math.max(0, ...db.lt_users.map(u => Number(u.id))) + 1;
+          db.lt_users.push({ id: nextId, username: uname, display_name: dname, password_hash: hash, active: 1, created_at: Math.floor(Date.now() / 1000) });
+          auditRecordLocal(db, actor, 'account_add', uname, 'Thêm quản trị viên ' + dname + '.');
+        } else if (action === 'admin_accounts_edit') {
+          const target = body.targetUsername;
+          const [uname, dname] = validateUserInputLocal(body.username, body.displayName);
+          const pwd = body.password || '';
+          const hash = pwd === '' ? null : hashPasswordLocal(pwd);
+          const u = db.lt_users.find(x => x.username === target);
+          if (!u) throw makeAppError('Tài khoản đã thay đổi hoặc không còn tồn tại. Tải lại danh sách.', 400);
+          if (hash !== null && Number(u.id) === Number(actor.user_id)) throw makeAppError('Dùng nút Đổi mật khẩu để đổi mật khẩu của chính bạn.', 400);
+          if (db.lt_users.some(x => x.username === uname && Number(x.id) !== Number(u.id))) throw makeAppError('Tên đăng nhập đã tồn tại.', 400);
+          u.username = uname;
+          u.display_name = dname;
+          if (hash !== null) u.password_hash = hash;
+          auditRecordLocal(db, actor, 'account_edit', uname, `Cập nhật tên hiển thị/tên đăng nhập: ${target} → ${uname}.` + (hash ? ' Đặt lại mật khẩu và kết thúc các phiên đăng nhập.' : ''));
+        } else if (action === 'admin_accounts_delete') {
+          const target = body.username;
+          if (body.confirmation !== target) throw makeAppError('Nhập đúng tên đăng nhập của tài khoản cần xóa.', 400);
+          const u = db.lt_users.find(x => x.username === target);
+          if (!u) throw makeAppError('Không tìm thấy tài khoản.', 400);
+          if (Number(u.id) === Number(actor.user_id)) throw makeAppError('Không thể xóa tài khoản đang đăng nhập.', 400);
+          if (u.active && db.lt_users.filter(x => x.active).length <= 1) throw makeAppError('Phải giữ ít nhất một quản trị viên hoạt động.', 400);
+          db.lt_users = db.lt_users.filter(x => Number(x.id) !== Number(u.id));
+          db.lt_sessions = db.lt_sessions.filter(s => Number(s.user_id) !== Number(u.id));
+          auditRecordLocal(db, actor, 'account_delete', target, 'Xóa tài khoản ' + u.display_name + ' và kết thúc các phiên đăng nhập. Giữ lịch trực và nhật ký trước đó.');
+        } else if (action === 'admin_accounts_active') {
+          const target = body.username;
+          const active = Boolean(body.active);
+          const u = db.lt_users.find(x => x.username === target);
+          if (!u) throw makeAppError('Không tìm thấy tài khoản.', 400);
+          if (!active && (Number(u.id) === Number(actor.user_id) || db.lt_users.filter(x => x.active).length <= 1)) {
+            throw makeAppError('Không thể tự khóa tài khoản hoặc khóa quản trị viên cuối cùng.', 400);
+          }
+          u.active = active ? 1 : 0;
+          db.lt_sessions = db.lt_sessions.filter(s => Number(s.user_id) !== Number(u.id));
+          auditRecordLocal(db, actor, active ? 'account_unlock' : 'account_lock', target, (active ? 'Mở lại' : 'Tạm khóa') + ' tài khoản ' + u.display_name + '.');
+        }
+        saveLocalDb(db);
+        const me = db.lt_users.find(x => Number(x.id) === Number(actor.user_id));
+        return {
+          users: db.lt_users.slice().sort((a, b) => a.username.localeCompare(b.username)).map(u => ({ username: u.username, displayName: u.display_name, active: Boolean(u.active) })),
+          user: { username: me.username, displayName: me.display_name, active: Boolean(me.active) }
+        };
+      }
+
+      if (action === 'admin_draft') {
+        const m = db.lt_meta;
+        if (Number(body.expectedDraftRevision) !== Number(m.draft_revision) || Number(body.resetGeneration) !== Number(m.reset_generation)) {
+          throw makeAppError('Lịch đã thay đổi hoặc đã reset ở cửa sổ khác. Tải bản mới trước khi sửa tiếp; có thể tải JSON để giữ bản đang mở.', 409);
+        }
+        const before = JSON.parse(m.draft_state_json);
+        let state = normalizeStateLocal(body.state);
+        state = preserveBasesLocal(state, before, body);
+        state = preserveFixedRulesLocal(state, before, body);
+        m.draft_revision = Number(m.draft_revision) + 1;
+        m.team_name = state.teamName;
+        m.view_month = state.viewMonth;
+        m.settings_json = JSON.stringify(state.settings);
+        m.draft_state_json = JSON.stringify(state);
+        auditDraftLocal(db, actor, before, state, body.changeKind === 'restore');
+        saveLocalDb(db);
+        const snap = privateSnapshotLocal(db, state);
+        delete snap.state;
+        return snap;
+      }
+
+      if (action === 'admin_publish') {
+        const m = db.lt_meta;
+        if (Number(body.expectedDraftRevision) !== Number(m.draft_revision) || Number(body.resetGeneration) !== Number(m.reset_generation) || Number(body.expectedRevision) !== Number(m.public_revision)) {
+          throw makeAppError('Lịch đã thay đổi hoặc đã reset ở cửa sổ khác. Tải bản mới trước khi sửa tiếp; có thể tải JSON để giữ bản đang mở.', 409);
+        }
+        const state = JSON.parse(m.draft_state_json);
+        const keys = Array.isArray(body.months) ? Array.from(new Set(body.months)).sort() : [];
+        if (!keys.length) throw makeAppError('Chọn ít nhất một tháng đã xếp để công bố.', 400);
+        for (const k of keys) {
+          if (!state.months[k]) throw makeAppError('Tháng công bố chưa có lịch.', 400);
+        }
+        const pub = buildPublishStateLocal(state, keys);
+        m.public_revision = Number(m.public_revision) + 1;
+        m.public_months = JSON.stringify(keys);
+        m.public_state = JSON.stringify(pub);
+        m.published_at = new Date().toISOString();
+        auditRecordLocal(db, actor, 'publish', 'Lịch trực', 'Công bố ' + keys.length + ' tháng: ' + keys.slice(0, 25).join(', ') + '.');
+        saveLocalDb(db);
+        const snap = privateSnapshotLocal(db, state);
+        delete snap.state;
+        return snap;
+      }
+
+      if (action === 'admin_reset') {
+        if (body.confirmation !== 'RESET LICH') throw makeAppError('Nhập đúng RESET LICH để xác nhận xóa toàn bộ lịch trực.', 400);
+        const m = db.lt_meta;
+        const state = JSON.parse(m.draft_state_json);
+        const count = Object.keys(state.months || {}).length;
+        const nowIso = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14);
+        const bName = `truoc_reset_toan_bo_${nowIso.slice(0, 8)}_${nowIso.slice(8, 14)}_${randomHex(6)}.json`;
+        const snapBefore = privateSnapshotLocal(db, state);
+        const draftCopy = snapBefore.state;
+        delete snapBefore.state;
+        db.lt_backups.push({
+          id: db.lt_backups.length + 1,
+          file_name: bName,
+          kind: 'reset',
+          payload: JSON.stringify({ schemaVersion: 2, ...snapBefore, draft: draftCopy, publicState: m.public_state ? JSON.parse(m.public_state) : null }),
+          created_by: actor.user_id,
+          created_at: Math.floor(Date.now() / 1000)
+        });
+        state.months = {};
+        m.draft_revision = Number(m.draft_revision) + 1;
+        m.reset_generation = Number(m.reset_generation) + 1;
+        m.public_revision = Number(m.public_revision) + 1;
+        m.public_months = '[]';
+        m.public_state = '';
+        m.published_at = new Date().toISOString();
+        m.last_reset_backup = bName;
+        m.draft_state_json = JSON.stringify(state);
+        auditRecordLocal(db, actor, 'reset', 'Lịch trực', `Reset ${count} tháng và bản công bố. Đã tạo bản sao lưu trước khi xóa.`);
+        saveLocalDb(db);
+        return { ...privateSnapshotLocal(db, state), backupName: bName };
+      }
+    }
+
+    if (action === 'auth_status') {
+      const actor = getLocalActor(db, sessionToken, csrfToken, false);
+      return {
+        configured: true,
+        user: actor ? { username: actor.username, displayName: actor.display_name, active: true } : null,
+        csrfToken: actor ? actor.csrf_token : null,
+        appearance: readThemeLocal(db)
+      };
+    }
+
+    if (action === 'view') {
+      return publicSnapshotLocal(db);
+    }
+
+    const actor = getLocalActor(db, sessionToken, csrfToken, false);
+    if (!actor) throw makeAppError('Bạn cần đăng nhập quản trị hoặc phiên đã hết hạn. Tải lại trang quản trị để đăng nhập.', 401);
+
+    if (action === 'admin_theme') return readThemeLocal(db);
+    if (action === 'admin_state') {
+      return {
+        ...privateSnapshotLocal(db),
+        user: { username: actor.username, displayName: actor.display_name, active: true },
+        appearance: readThemeLocal(db)
+      };
+    }
+    if (action === 'admin_accounts') {
+      return {
+        users: db.lt_users.slice().sort((a, b) => a.username.localeCompare(b.username)).map(u => ({ username: u.username, displayName: u.display_name, active: Boolean(u.active) })),
+        user: { username: actor.username, displayName: actor.display_name, active: true }
+      };
+    }
+    if (action === 'admin_activity') {
+      const pageReq = Math.max(1, parseInt(String(body.page || '1'), 10) || 1);
+      const all = db.lt_audit_log.slice().sort((a, b) => Number(b.id) - Number(a.id));
+      const total = all.length;
+      const totalPages = Math.max(1, Math.ceil(total / 15));
+      const page = Math.min(pageReq, totalPages);
+      const offset = (page - 1) * 15;
+      const names = {
+        appearance: 'Đổi màu giao diện', installed: 'Cài đặt website', login: 'Đăng nhập', logout: 'Đăng xuất',
+        password_change: 'Đổi mật khẩu', password_recover: 'Khôi phục tài khoản', account_add: 'Thêm tài khoản',
+        account_edit: 'Sửa tài khoản', account_delete: 'Xóa tài khoản', account_lock: 'Khóa tài khoản',
+        account_unlock: 'Mở khóa tài khoản', schedule_create: 'Tạo lịch trực', draft_update: 'Cập nhật bản soạn',
+        restore: 'Khôi phục dữ liệu', publish: 'Công bố lịch', reset: 'Reset toàn bộ lịch'
+      };
+      return {
+        items: all.slice(offset, offset + 15).map(r => ({
+          id: Number(r.id),
+          time: new Date(Number(r.created_at) * 1000).toISOString(),
+          actorUsername: r.actor_username,
+          actorName: r.actor_display_name,
+          event: r.event_name,
+          action: names[r.event_name] || 'Cập nhật hệ thống',
+          target: r.target,
+          details: r.details
+        })),
+        page,
+        pageSize: 15,
+        total,
+        totalPages
+      };
+    }
+    if (action === 'admin_reset_backup') {
+      const name = String(body.name || '');
+      const row = db.lt_backups.find(b => b.file_name === name && b.kind === 'reset');
+      if (!row) throw makeAppError('Không tìm thấy bản sao lưu.', 404);
+      return JSON.parse(row.payload);
+    }
+
+    throw makeAppError('Không tìm thấy chức năng.', 404);
+  }
+
+  // =========================================================================
+  // Unified Request Dispatcher (Google Sheets Apps Script URL or Local DB)
+  // =========================================================================
+  async function sendToAppsScript(scriptUrl, payload) {
+    let response;
+    try {
+      response = await fetch(scriptUrl, {
+        method: 'POST',
+        redirect: 'follow',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      });
+    } catch (err) {
+      throw makeAppError('Chưa kết nối được tới Google Apps Script Web App. Kiểm tra đường dẫn URL, quyền "Bất kỳ ai (Anyone)" và kết nối mạng.', 503);
+    }
+    let result;
+    try {
+      result = await response.json();
+    } catch {
+      throw makeAppError('Google Apps Script chưa trả về dữ liệu JSON hợp lệ. Hãy chắc chắn bạn đã triển khai dưới dạng "Ứng dụng web" với quyền truy cập "Bất kỳ ai (Anyone)".', 503);
+    }
+    if (!response.ok || (result && result.ok === false) || (result && result.error)) {
+      throw makeAppError(result?.error || 'Chưa hoàn tất thao tác với Google Sheets.', result?.status || response.status || 400);
+    }
+    return result;
+  }
+
+  async function request(path, options = {}) {
+    ensureCanvasDefaultSeeded();
+    const cfg = getStoredConfig();
+    const [route, query = ''] = path.split('?');
+    const params = new URLSearchParams(query);
+    const action = params.get('action') || route.replace(/^\/api\//, '').replaceAll('/', '_').replaceAll('-', '_');
+    const method = (options.method || 'GET').toUpperCase();
+    let bodyObj = {};
+    if (options.body && typeof options.body === 'string') {
+      try { bodyObj = JSON.parse(options.body); } catch {}
+    } else if (options.body && typeof options.body === 'object') {
+      bodyObj = { ...options.body };
+    }
+    for (const [k, v] of params.entries()) {
+      if (k !== 'action' && bodyObj[k] === undefined) bodyObj[k] = v;
+    }
+
+    const sess = getSession();
+    const sessionToken = sess?.sessionToken || '';
+    const csrfToken = options.headers?.['X-Rota-Token'] || sess?.csrfToken || '';
+
+    let result;
+    if (cfg && cfg.hosting === 'googlesheets' && cfg.scriptUrl) {
+      result = await sendToAppsScript(cfg.scriptUrl, {
+        ...bodyObj,
+        _action: action,
+        _method: method,
+        _session: sessionToken,
+        _csrf: csrfToken,
+        _clientKey: clientKey()
+      });
+    } else {
+      ensureCanvasDefaultSeeded(true);
+      const refreshedSess = getSession();
+      const effSession = sessionToken || refreshedSess?.sessionToken || '';
+      const effCsrf = csrfToken || refreshedSess?.csrfToken || '';
+      result = handleLocalRequest(action, method, bodyObj, effSession, effCsrf);
+    }
+
+    if (action === 'auth_login' || action === 'auth_password') {
+      if (result.sessionToken) {
+        setSession({
+          sessionToken: result.sessionToken,
+          csrfToken: result.csrfToken,
+          user: result.user || sess?.user || null
+        });
+      }
+    } else if (action === 'auth_logout') {
+      setSession(null);
+    }
+
+    return result;
+  }
+
+  async function setupStatus() {
+    ensureCanvasDefaultSeeded();
+    const cfg = getStoredConfig();
+    if (!cfg) {
+      return { configured: false, locked: false, hosting: 'googlesheets', scriptUrl: '', appearance: { revision: 0, theme: defaultThemeObj() } };
+    }
+    try {
+      if (cfg.hosting === 'googlesheets' && cfg.scriptUrl) {
+        const res = await sendToAppsScript(cfg.scriptUrl, { _action: 'setup_status', _method: 'GET' });
+        return { configured: Boolean(res.installed), locked: Boolean(res.locked), hosting: 'googlesheets', scriptUrl: cfg.scriptUrl, database: res.database, appearance: res.appearance };
+      }
+      const res = handleLocalRequest('setup_status', 'GET', {}, '', '');
+      return { configured: Boolean(res.installed), locked: Boolean(res.locked), hosting: 'local', scriptUrl: '', database: res.database, appearance: res.appearance };
+    } catch {
+      return { configured: false, locked: false, hosting: cfg.hosting || 'googlesheets', scriptUrl: cfg.scriptUrl || '', appearance: { revision: 0, theme: defaultThemeObj() } };
+    }
+  }
+
+  async function setupRequest(body) {
+    const hosting = body.hosting || 'googlesheets';
+    const scriptUrl = (body.db?.scriptUrl || body.scriptUrl || '').trim();
+    if (hosting === 'googlesheets') {
+      if (!scriptUrl) {
+        throw makeAppError('Vui lòng dán Địa chỉ Web App (URL kết thúc bằng /exec) từ Google Apps Script.', 400);
+      }
+      if (/script\.google\.com\/.*\/(edit|dev)/i.test(scriptUrl)) {
+        throw makeAppError('Bạn đang dán link chỉnh sửa/thử nghiệm (/edit hoặc /dev). Hãy bấm Triển khai (Deploy) → Triển khai mới → Ứng dụng web (Web app) → chọn Bất kỳ ai (Anyone) và sao chép URL kết thúc bằng /exec.', 400);
+      }
+      if (!/^https:\/\/script\.google\.com\/(?:a\/macros\/[^/]+\/|macros\/)s\/[A-Za-z0-9_-]+\/exec/i.test(scriptUrl)) {
+        throw makeAppError('Địa chỉ Web App chưa hợp lệ. Hãy dán đúng URL kết thúc bằng /exec từ Google Apps Script (ví dụ: https://script.google.com/macros/s/.../exec).', 400);
+      }
+      const res = await sendToAppsScript(scriptUrl, { ...body, _action: body.action === 'check' ? 'setup_check' : 'setup_finish', _method: 'POST' });
+      saveStoredConfig({ hosting: 'googlesheets', scriptUrl, sheetName: res.database || 'Google Sheets' });
+      if (body.action === 'finish' && res.sessionToken) {
+        setSession({ sessionToken: res.sessionToken, csrfToken: res.csrfToken, user: res.user });
+      }
+      return res;
+    } else {
+      const res = handleLocalRequest(body.action === 'check' ? 'setup_check' : 'setup_finish', 'POST', body, '', '');
+      saveStoredConfig({ hosting: 'local', scriptUrl: '', sheetName: 'Bộ nhớ trình duyệt (Local Sheets DB)' });
+      if (body.action === 'finish' && res.sessionToken) {
+        setSession({ sessionToken: res.sessionToken, csrfToken: res.csrfToken, user: res.user });
+      }
+      return res;
+    }
+  }
+
+  function generateConfigJsContent(scriptUrl) {
+    const clean = String(scriptUrl || getStoredConfig()?.scriptUrl || '').trim();
+    return `// Cấu hình kết nối Google Sheets (Google Apps Script Web App URL) cho GitHub Pages\nwindow.ROTA_CONFIG = {\n  scriptUrl: ${JSON.stringify(clean)}\n};\n`;
+  }
+
+  const api = {
+    request,
+    setupStatus,
+    setupRequest,
+    getStoredConfig,
+    saveStoredConfig,
+    getSession,
+    setSession,
+    generateConfigJsContent,
+    ensureCanvasDefaultSeeded
+  };
+
+  root.RotaBackend = api;
+  if (typeof module !== 'undefined') module.exports = api;
+})(globalThis);
+</script>
+<script>(async () => {
+  'use strict';
+  const $ = s => document.querySelector(s);
+  const A = window.RotaAppearance;
+  const error = $('#setupError'), dbForm = $('#databaseForm'), accountForm = $('#accountForm');
+  let step = 1, busy = false, lastScriptUrl = '';
+
+  try {
+    const status = await RotaBackend.setupStatus();
+    if (status?.appearance?.theme && A) A.apply(status.appearance.theme);
+    if (status?.scriptUrl && $('#scriptUrl')) {
+      $('#scriptUrl').value = status.scriptUrl;
+      lastScriptUrl = status.scriptUrl;
+    }
+    if (status?.locked) {
+      $('#lockedSection').hidden = false;
+      $('#wizardSection').hidden = true;
+      return;
+    }
+  } catch {}
+
+  if (!dbForm) return;
+  const hosting = () => dbForm.elements.hosting.value;
+  const showError = message => {
+    error.textContent = message;
+    error.hidden = false;
+    error.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  };
+
+  function help() {
+    for (const id of ['helpGoogleSheets', 'helpLocal', 'helpAccount', 'helpDone']) {
+      const el = $('#' + id);
+      if (el) el.hidden = id !== (step === 1 ? (hosting() === 'local' ? 'helpLocal' : 'helpGoogleSheets') : step === 2 ? 'helpAccount' : 'helpDone');
+    }
+  }
+
+  function go(next) {
+    step = next;
+    error.hidden = true;
+    for (let n = 1; n <= 3; n++) {
+      $('#step' + n).hidden = n !== next;
+      const item = $('[data-step="' + n + '"]');
+      item.classList.toggle('current', n === next);
+      item.classList.toggle('passed', n < next);
+      if (n === next) item.setAttribute('aria-current', 'step');
+      else item.removeAttribute('aria-current');
+    }
+    help();
+    $('#title' + next).focus();
+  }
+
+  function preset() {
+    const isLocal = hosting() === 'local';
+    const gsFields = $('#gsFields');
+    if (gsFields) gsFields.hidden = isLocal;
+    $('#scriptUrl').required = !isLocal;
+    help();
+  }
+
+  for (const radio of dbForm.querySelectorAll('[name="hosting"]')) {
+    radio.addEventListener('change', preset);
+  }
+
+  for (const button of document.querySelectorAll('.reveal')) {
+    button.addEventListener('click', () => {
+      const input = $('#' + button.dataset.for), show = input.type === 'password';
+      input.type = show ? 'text' : 'password';
+      button.textContent = show ? 'Ẩn' : 'Hiện';
+      button.setAttribute('aria-pressed', String(show));
+    });
+  }
+
+  function connection() {
+    return {
+      hosting: hosting(),
+      db: {
+        scriptUrl: $('#scriptUrl').value.trim(),
+        sheetName: $('#sheetName')?.value.trim() || 'Google Sheets'
+      }
+    };
+  }
+
+  function pending(value, button, label) {
+    busy = value;
+    for (const input of document.querySelectorAll('form input,form button,form summary')) input.disabled = value;
+    button.textContent = value ? label : button.id === 'checkButton' ? 'Kiểm tra kết nối & tiếp tục →' : 'Hoàn tất cài đặt →';
+  }
+
+  dbForm.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (busy) return;
+    error.hidden = true;
+    const conn = connection();
+    lastScriptUrl = conn.db.scriptUrl;
+    const button = $('#checkButton');
+    pending(true, button, 'Đang kiểm tra kết nối…');
+    try {
+      const result = await RotaBackend.setupRequest({ action: 'check', ...conn });
+      $('#databaseSummary').textContent = (result.database || 'Google Sheets') + ' · ' + (result.host || 'Google Sheets');
+      go(2);
+    } catch (e) {
+      if (e.status === 409 && conn.hosting === 'googlesheets' && conn.db.scriptUrl) {
+        RotaBackend.saveStoredConfig({ hosting: 'googlesheets', scriptUrl: conn.db.scriptUrl, sheetName: 'Google Sheets' });
+        $('#lockedSection').hidden = false;
+        $('#wizardSection').hidden = true;
+        return;
+      }
+      showError(e.message || 'Chưa kết nối được tới Google Sheets.');
+    } finally {
+      pending(false, button);
+    }
+  });
+
+  accountForm.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (busy) return;
+    error.hidden = true;
+    if ($('#password').value !== $('#confirmPassword').value) {
+      showError('Hai mật khẩu quản trị chưa khớp. Vui lòng nhập lại.');
+      $('#confirmPassword').focus();
+      return;
+    }
+    const body = {
+      action: 'finish',
+      ...connection(),
+      displayName: $('#displayName').value.trim(),
+      username: $('#username').value.trim(),
+      password: $('#password').value,
+      confirmPassword: $('#confirmPassword').value
+    };
+    const button = $('#finishButton');
+    pending(true, button, 'Đang khởi tạo dữ liệu…');
+    try {
+      await RotaBackend.setupRequest(body);
+      for (const input of document.querySelectorAll('input[type="password"],.password-field input')) input.value = '';
+      go(3);
+    } catch (e) {
+      showError(e.message || 'Chưa hoàn tất bước tạo website.');
+    } finally {
+      pending(false, button);
+    }
+  });
+
+  $('#backButton').addEventListener('click', () => go(1));
+  $('#editDatabase').addEventListener('click', () => go(1));
+  $('#downloadConfigBtn')?.addEventListener('click', () => {
+    const content = RotaBackend.generateConfigJsContent(lastScriptUrl);
+    const blob = new Blob([content], { type: 'application/javascript' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'config.js';
+    document.body.append(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 60000);
+  });
+
+  const siteAddr = $('#detectedSiteUrl');
+  if (siteAddr && typeof location !== 'undefined') {
+    siteAddr.textContent = (location.origin && location.origin !== 'null') ? (location.origin + location.pathname.replace(/\/[^/]*$/, '')) : 'Đang mở trực tiếp trên máy (Sẵn sàng đưa lên GitHub Pages)';
+  }
+  preset();
+  help();
+})();
+</script>
+</body></html>
